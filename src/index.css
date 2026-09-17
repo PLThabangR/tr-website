@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-navy: #0A1628;
+  --color-tech-blue: #2563EB;
+  --color-african-green: #059669;
+  --color-gold: #F59E0B;
+  --color-slate-gray: #64748B;
+  --color-light-blue: #DBEAFE;
+  --color-dark-gray: #1E293B;
+  --color-deep-navy: #0F172A;
+
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply font-sans text-dark-gray bg-white antialiased;
+  }
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold text-navy tracking-tight;
+  }
+  h2 {
+    @apply text-3xl md:text-4xl font-bold text-navy tracking-tight;
+  }
+  h3 {
+    @apply text-2xl font-semibold text-navy;
+  }
+  h4 {
+    @apply text-lg font-semibold text-navy;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 bg-tech-blue text-white font-semibold px-6 py-3 rounded-lg hover:bg-blue-700 active:scale-[0.98] transition-all duration-200 shadow-sm hover:shadow-md;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 bg-white text-tech-blue font-semibold px-6 py-3 rounded-lg border-2 border-tech-blue hover:bg-light-blue active:scale-[0.98] transition-all duration-200;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 text-white font-semibold px-6 py-3 rounded-lg border-2 border-white/30 hover:bg-white/10 active:scale-[0.98] transition-all duration-200;
+  }
+  .container-custom {
+    @apply max-w-6xl mx-auto px-6;
+  }
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+  .card {
+    @apply bg-white p-8 rounded-xl border border-slate-200 hover:border-tech-blue/30 hover:shadow-lg transition-all duration-300;
+  }
+  .card-icon {
+    @apply w-12 h-12 rounded-lg bg-light-blue flex items-center justify-center text-tech-blue mb-4;
+  }
+  .badge {
+    @apply inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-african-green/10 text-african-green;
+  }
+}
