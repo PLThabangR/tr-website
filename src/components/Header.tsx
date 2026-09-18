@@ -15,15 +15,19 @@ export default function Header() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-navy/95 backdrop-blur-md border-b border-white/10">
+    <header className="sticky top-0 z-50 bg-[#0e1129] backdrop-blur-md border-b border-white/10">
       <div className="container-custom flex items-center justify-between py-4">
         <Link to="/" className="flex items-center gap-3 group">
-          <div className="w-10 h-10 bg-gradient-to-br from-tech-blue to-blue-700 rounded-lg flex items-center justify-center font-bold text-white shadow-lg group-hover:shadow-tech-blue/50 transition-shadow">
-            TR
-          </div>
-          <span className="hidden md:block font-semibold text-sm text-white">
-            TR Software Development Consulting
-          </span>
+          <img
+            src="/TRLogo.png"
+            alt="TR Software Development Consulting"
+            className="h-8 w-auto md:hidden"
+          />
+          <img
+            src="/TRLogoHorBGBlue.png"
+            alt="TR Software Development Consulting"
+            className="h-16 w-auto hidden md:block"
+          />
         </Link>
 
         <nav className="hidden md:flex items-center gap-1">
