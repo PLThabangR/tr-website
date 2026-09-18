@@ -177,7 +177,7 @@ export default function Services() {
                     >
                       <Check
                         size={16}
-                        className="text-african-green flex-shrink-0 mt-0.5"
+                        className="text-african-green shrink-0 mt-0.5"
                       />
                       <span>{feature}</span>
                     </li>
@@ -193,7 +193,7 @@ export default function Services() {
         <div className="container-custom">
           <h2 className="mb-4">Technologies we support</h2>
           <p className="text-lg text-slate-gray mb-12 max-w-3xl leading-relaxed">
-            We work with the stack your system is built on — not the stack we
+            We work with the stack your system is built on  not the stack we
             prefer. If your system uses a technology not listed here, we will
             assess whether we can support it during the discovery phase.
           </p>
