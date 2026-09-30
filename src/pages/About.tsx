@@ -73,7 +73,7 @@ export default function About() {
                 ].map((value) => (
                   <div key={value.title} className="flex gap-3">
                     <Check
-                      className="text-african-green flex-shrink-0 mt-1"
+                      className="text-african-green shrink-0 mt-1"
                       size={18}
                     />
                     <div>
