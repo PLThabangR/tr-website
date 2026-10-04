@@ -50,7 +50,7 @@ export default function Header() {
 
           {/* AppDev External Website */}
           <a
-            href="https://trapplicationdev.co.za"
+            href="https://tra-applicationdev.vercel.app/"
             className="px-4 py-2 rounded-lg text-sm font-semibold text-tech-blue hover:text-white hover:bg-tech-blue/10 transition-colors"
           >
             AppDev
