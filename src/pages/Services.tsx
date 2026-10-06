@@ -8,6 +8,7 @@ import {
   Code2,
   BarChart3,
   Stethoscope,
+  MonitorSmartphone,
   ArrowRight,
   Check,
 } from "lucide-react";
@@ -79,6 +80,20 @@ export default function Services() {
       ],
     },
     {
+      icon: MonitorSmartphone,
+      title: "Front-End Application Maintenance",
+      description:
+        "Angular, React, and JavaScript applications need ongoing maintenance just like backends. Browser updates, library deprecations, and third-party API changes all break front-ends over time. We fix them, update them, and keep them working.",
+      features: [
+        "Bug fixes in Angular, React, and JavaScript/TypeScript",
+        "Dependency and framework updates",
+        "Browser compatibility fixes",
+        "Performance optimisation",
+        "Responsive and accessibility improvements",
+        "Build pipeline maintenance",
+      ],
+    },
+    {
       icon: Code2,
       title: "Custom Development",
       description:
@@ -122,7 +137,14 @@ export default function Services() {
   const techStack = [
     {
       category: "Frontend",
-      items: ["React", "Angular", "Vue.js", "TypeScript"],
+      items: [
+        "React",
+        "Angular",
+        "Vue.js",
+        "TypeScript",
+        "JavaScript",
+        "Tailwind CSS",
+      ],
     },
     {
       category: "Backend",
@@ -134,7 +156,14 @@ export default function Services() {
     },
     {
       category: "Cloud & DevOps",
-      items: ["AWS", "Azure", "GitHub Actions", "Azure DevOps"],
+      items: [
+        "AWS",
+        "Azure",
+        "GitHub Actions",
+        "Azure DevOps",
+        "Docker",
+        "Terraform",
+      ],
     },
   ];
 
@@ -150,9 +179,9 @@ export default function Services() {
             Everything you need to keep your systems running.
           </h1>
           <p className="text-xl text-slate-300 max-w-3xl leading-relaxed">
-            Eight service pillars covering CRM, HR, payroll, business
-            applications, integrations, maintenance, custom development, and
-            reporting.
+            Nine service pillars covering CRM, HR, payroll, business
+            applications, integrations, maintenance, front-end support, custom
+            development, and reporting.
           </p>
         </div>
       </section>
@@ -193,7 +222,7 @@ export default function Services() {
         <div className="container-custom">
           <h2 className="mb-4">Technologies we support</h2>
           <p className="text-lg text-slate-gray mb-12 max-w-3xl leading-relaxed">
-            We work with the stack your system is built on  not the stack we
+            We work with the stack your system is built on — not the stack we
             prefer. If your system uses a technology not listed here, we will
             assess whether we can support it during the discovery phase.
           </p>
