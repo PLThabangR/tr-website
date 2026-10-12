@@ -104,7 +104,7 @@ export default function About() {
               },
               {
                 title: "Collaboration",
-                desc: "We work alongside your team — DevOps, IT, business users — not above them.",
+                desc: "We work alongside your team DevOps, IT, business users not above them.",
               },
               {
                 title: "Transparency",
@@ -148,7 +148,7 @@ export default function About() {
             <div className="bg-light-blue p-6 rounded-xl border border-tech-blue/20">
               <p className="text-navy text-sm leading-relaxed">
                 <strong>Group structure:</strong> TR Software Development
-                Consulting (Pty) Ltd operates two complementary practices —
+                Consulting (Pty) Ltd operates two complementary practices
                 Application Managed Services (this brand) and TR Application
                 Development (a division for new builds, integrations, and cloud
                 deployment). Clients benefit from a single relationship that

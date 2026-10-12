@@ -226,7 +226,7 @@ export default function Home() {
             {[
               {
                 title: "Multi-stack coverage",
-                desc: "We support systems regardless of who built them — .NET, Java, TypeScript, React, Angular.",
+                desc: "We support systems regardless of who built them .NET, Java, TypeScript, React, Angular.",
               },
               {
                 title: "We maintain systems we did not build",
