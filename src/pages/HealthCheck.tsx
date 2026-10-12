@@ -16,13 +16,15 @@ export default function HealthCheck() {
     "Security posture",
     "Performance and scalability risks",
     "Documentation and maintainability",
+    "Front-end dependencies and browser compatibility",
+    "Existing user enhancement backlog",
   ];
 
   const deliverables = [
     "Current state assessment",
     "Identified risks and vulnerabilities",
     "Quick wins (issues that can be resolved easily)",
-    "Recommended roadmap (maintain, improve, or replace)",
+    "Recommended roadmap (maintain, improve or replace)",
   ];
 
   const steps = [
@@ -44,7 +46,7 @@ export default function HealthCheck() {
     {
       icon: Map,
       title: "Recommended roadmap",
-      desc: "We recommend maintenance, improvement, or replacement — whichever is right.",
+      desc: "We recommend maintenance, improvement, or replacement whichever is right.",
     },
   ];
 
@@ -59,7 +61,7 @@ export default function HealthCheck() {
           <h1 className="text-white mb-4 max-w-3xl">System Health Check</h1>
           <p className="text-xl text-slate-300 max-w-3xl leading-relaxed">
             A fixed-fee assessment of your existing system. Find out what you
-            have, what is at risk, and what to do next.
+            have, what is at risk and what to do next.
           </p>
         </div>
       </section>
@@ -131,10 +133,10 @@ export default function HealthCheck() {
               <div className="bg-light-blue p-8 rounded-xl lg:sticky lg:top-24">
                 <h4 className="mb-4">Investment</h4>
                 <p className="text-4xl font-bold text-navy mb-2">
-                  R8,500 – R15,000
+                  R8,500 – R35,000
                 </p>
                 <p className="text-slate-gray mb-6 text-sm">
-                  Depending on system complexity. Payment 100% upfront.
+                  Depending on scope. Payment 100% upfront.
                 </p>
                 <Link to="/contact" className="btn-primary w-full">
                   Book your health check
@@ -146,18 +148,32 @@ export default function HealthCheck() {
 
                 <div className="mt-8 pt-8 border-t border-tech-blue/20">
                   <h4 className="mb-3 text-sm">Pricing tiers</h4>
-                  <div className="space-y-3 text-sm">
-                    <div className="flex justify-between">
-                      <span className="text-slate-gray">Simple</span>
-                      <span className="font-mono font-semibold">R8,500</span>
+                  <div className="space-y-4 text-sm">
+                    <div>
+                      <div className="flex justify-between mb-1">
+                        <span className="text-slate-gray font-semibold">
+                          Mini Health Check
+                        </span>
+                        <span className="font-mono font-semibold">
+                          R8,500 – R12,000
+                        </span>
+                      </div>
+                      <div className="text-xs text-slate-gray">
+                        1–2 days, lighter deliverable
+                      </div>
                     </div>
-                    <div className="flex justify-between">
-                      <span className="text-slate-gray">Moderate</span>
-                      <span className="font-mono font-semibold">R12,000</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-slate-gray">Complex</span>
-                      <span className="font-mono font-semibold">R15,000+</span>
+                    <div>
+                      <div className="flex justify-between mb-1">
+                        <span className="text-slate-gray font-semibold">
+                          Full Health Check
+                        </span>
+                        <span className="font-mono font-semibold">
+                          R25,000 – R35,000
+                        </span>
+                      </div>
+                      <div className="text-xs text-slate-gray">
+                        5 days, comprehensive report
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -178,7 +194,7 @@ export default function HealthCheck() {
               },
               {
                 q: "How long does it take?",
-                a: "7–10 business days from access being granted.",
+                a: "Mini: 1–2 days. Full: 5 business days. Both from the date access is granted.",
               },
               {
                 q: "What if we do not have documentation?",

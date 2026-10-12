@@ -2,21 +2,37 @@ import { Link } from "react-router-dom";
 import { Check, ArrowRight } from "lucide-react";
 
 export default function About() {
+  const team = [
+    {
+      role: "Founder & Principal Consultant",
+      focus: "Sales, client relationships, architecture, delivery oversight",
+    },
+    {
+      role: "Senior Application Developer",
+      focus: ".NET/C# backend, API, database, integration",
+    },
+    {
+      role: "Senior Application Developer",
+      focus: "React/Angular frontend, integration, testing",
+    },
+    { role: "Contract Designer", focus: "UI/UX design, engaged per project" },
+  ];
+
   return (
     <>
       <section className="bg-navy text-white section-padding relative overflow-hidden">
-        <div className="absolute inset-0 bg-linear-to-br from-navy via-deep-navy to-navy" />
+        <div className="absolute inset-0 bg-gradient-to-br from-navy via-deep-navy to-navy" />
         <div className="relative container-custom">
           <div className="badge mb-6 bg-african-green/20 text-african-green">
-            About TR
+            About TRS
           </div>
           <h1 className="text-white mb-4 max-w-3xl">
             We look after the software your business already depends on.
           </h1>
           <p className="text-xl text-slate-300 max-w-3xl leading-relaxed">
-            TR Software Development Consulting was founded in Midrand, South
-            Africa, to fill a gap: most businesses have critical systems, but no
-            one is maintaining them.
+            TR Software Development Consulting was founded in Midrand to fill a
+            gap: most businesses have critical systems, but no one is
+            maintaining them.
           </p>
         </div>
       </section>
@@ -47,40 +63,19 @@ export default function About() {
             </div>
 
             <div>
-              <h2 className="mb-6">Our values</h2>
+              <h2 className="mb-6">Our team</h2>
               <div className="space-y-4">
-                {[
-                  {
-                    title: "Reliability",
-                    desc: "We respond when we say we will. We fix what we promised to fix.",
-                  },
-                  {
-                    title: "Expertise",
-                    desc: "We understand systems built by others, on stacks we did not choose.",
-                  },
-                  {
-                    title: "Pragmatism",
-                    desc: "We recommend what is right, not what is trendy. If replacement is better than repair, we say so.",
-                  },
-                  {
-                    title: "Collaboration",
-                    desc: "We work alongside your team — DevOps, IT, business users — not above them.",
-                  },
-                  {
-                    title: "Transparency",
-                    desc: "You know what we are working on, what it costs, and why.",
-                  },
-                ].map((value) => (
-                  <div key={value.title} className="flex gap-3">
-                    <Check
-                      className="text-african-green shrink-0 mt-1"
-                      size={18}
-                    />
+                {team.map((member, index) => (
+                  <div
+                    key={member.role}
+                    className="flex gap-4 items-start bg-slate-50 p-5 rounded-xl"
+                  >
+                    <div className="w-8 h-8 rounded-lg bg-tech-blue text-white flex items-center justify-center font-bold text-sm flex-shrink-0">
+                      {index + 1}
+                    </div>
                     <div>
-                      <h4 className="mb-1">{value.title}</h4>
-                      <p className="text-slate-gray text-sm leading-relaxed">
-                        {value.desc}
-                      </p>
+                      <h4 className="mb-1 text-sm">{member.role}</h4>
+                      <p className="text-slate-gray text-sm">{member.focus}</p>
                     </div>
                   </div>
                 ))}
@@ -92,46 +87,74 @@ export default function About() {
 
       <section className="section-padding bg-slate-50">
         <div className="container-custom">
-          <h2 className="mb-12">What we are building</h2>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+          <h2 className="mb-12">Our values</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
-                step: "Now",
-                title: "Application Support",
-                desc: "Keeping existing systems running for South African SMEs.",
+                title: "Reliability",
+                desc: "We respond when we say we will. We fix what we promised to fix.",
               },
               {
-                step: "Next",
-                title: "Application Management",
-                desc: "Full managed services across multiple systems and platforms.",
+                title: "Expertise",
+                desc: "We understand systems built by others, on stacks we did not choose.",
               },
               {
-                step: "Later",
-                title: "Application Integration",
-                desc: "Connecting systems so data flows reliably across the business.",
+                title: "Pragmatism",
+                desc: "We recommend what is right, not what is trendy. If replacement is better than repair, we say so.",
               },
               {
-                step: "Eventually",
-                title: "Business Application Services",
-                desc: "A complete application partner for growing businesses.",
+                title: "Collaboration",
+                desc: "We work alongside your team — DevOps, IT, business users — not above them.",
               },
-            ].map((phase, index) => (
-              <div key={phase.step} className="relative">
-                <div className="text-sm font-mono text-tech-blue mb-3">
-                  {phase.step}
-                </div>
-                <h4 className="mb-2">{phase.title}</h4>
-                <p className="text-slate-gray text-sm leading-relaxed">
-                  {phase.desc}
-                </p>
-                {index < 3 && (
-                  <ArrowRight
-                    className="hidden md:block absolute top-1 -right-3 text-slate-300"
-                    size={20}
+              {
+                title: "Transparency",
+                desc: "You know what we are working on, what it costs, and why.",
+              },
+              {
+                title: "Continuity",
+                desc: "If something happens to one of us, another team member knows your system and can step in.",
+              },
+            ].map((value) => (
+              <div
+                key={value.title}
+                className="bg-white p-6 rounded-xl border border-slate-200"
+              >
+                <div className="flex gap-3 mb-2">
+                  <Check
+                    className="text-african-green flex-shrink-0 mt-1"
+                    size={18}
                   />
-                )}
+                  <h4>{value.title}</h4>
+                </div>
+                <p className="text-slate-gray text-sm leading-relaxed">
+                  {value.desc}
+                </p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section-padding">
+        <div className="container-custom">
+          <div className="max-w-3xl">
+            <h2 className="mb-4">Part of the TR group</h2>
+            <p className="text-slate-gray leading-relaxed mb-6">
+              TR Software Development Consulting operates alongside TR
+              Application Development, a division of the same legal entity
+              focused on enterprise application development, systems
+              integration, and cloud deployment.
+            </p>
+            <div className="bg-light-blue p-6 rounded-xl border border-tech-blue/20">
+              <p className="text-navy text-sm leading-relaxed">
+                <strong>Group structure:</strong> TR Software Development
+                Consulting (Pty) Ltd operates two complementary practices —
+                Application Managed Services (this brand) and TR Application
+                Development (a division for new builds, integrations, and cloud
+                deployment). Clients benefit from a single relationship that
+                spans the full lifecycle: build, deploy, support, and enhance.
+              </p>
+            </div>
           </div>
         </div>
       </section>

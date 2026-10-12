@@ -5,10 +5,10 @@ import {
   Briefcase,
   Plug,
   Wrench,
+  MonitorSmartphone,
   Code2,
   BarChart3,
   Stethoscope,
-  MonitorSmartphone,
   ArrowRight,
   Check,
 } from "lucide-react";
@@ -70,7 +70,7 @@ export default function Services() {
     {
       icon: Wrench,
       title: "Application Maintenance",
-      description: "Keeping your applications healthy, updated, and secure.",
+      description: "Keeping your applications healthy, updated and secure.",
       features: [
         "Application updates and patches",
         "Dependency upgrades",
@@ -83,7 +83,7 @@ export default function Services() {
       icon: MonitorSmartphone,
       title: "Front-End Application Maintenance",
       description:
-        "Angular, React, and JavaScript applications need ongoing maintenance just like backends. Browser updates, library deprecations, and third-party API changes all break front-ends over time. We fix them, update them, and keep them working.",
+        "Angular, React, and JavaScript applications need ongoing maintenance just like backends. Browser updates, library deprecations, and third-party API changes all break front-ends over time. We fix them, update them and keep them working.",
       features: [
         "Bug fixes in Angular, React, and JavaScript/TypeScript",
         "Dependency and framework updates",
@@ -123,7 +123,7 @@ export default function Services() {
       icon: Stethoscope,
       title: "Application Health Checks",
       description:
-        "Assessment of your existing systems — the entry point to everything else we do.",
+        "Assessment of your existing systems the entry point to everything else we do.",
       features: [
         "Code and architecture review",
         "Database and integration assessment",
@@ -170,7 +170,7 @@ export default function Services() {
   return (
     <>
       <section className="bg-navy text-white section-padding relative overflow-hidden">
-        <div className="absolute inset-0 bg-linear-to-br from-navy via-deep-navy to-navy" />
+        <div className="absolute inset-0 bg-gradient-to-br from-navy via-deep-navy to-navy" />
         <div className="relative container-custom">
           <div className="badge mb-6 bg-african-green/20 text-african-green">
             Our Services
@@ -181,7 +181,7 @@ export default function Services() {
           <p className="text-xl text-slate-300 max-w-3xl leading-relaxed">
             Nine service pillars covering CRM, HR, payroll, business
             applications, integrations, maintenance, front-end support, custom
-            development, and reporting.
+            development and reporting.
           </p>
         </div>
       </section>
@@ -206,7 +206,7 @@ export default function Services() {
                     >
                       <Check
                         size={16}
-                        className="text-african-green shrink-0 mt-0.5"
+                        className="text-african-green flex-shrink-0 mt-0.5"
                       />
                       <span>{feature}</span>
                     </li>
@@ -222,7 +222,7 @@ export default function Services() {
         <div className="container-custom">
           <h2 className="mb-4">Technologies we support</h2>
           <p className="text-lg text-slate-gray mb-12 max-w-3xl leading-relaxed">
-            We work with the stack your system is built on — not the stack we
+            We work with the stack your system is built on not the stack we
             prefer. If your system uses a technology not listed here, we will
             assess whether we can support it during the discovery phase.
           </p>

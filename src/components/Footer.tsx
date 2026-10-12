@@ -17,8 +17,12 @@ export default function Footer() {
             </div>
             <p className="text-slate-400 text-sm max-w-md mb-6">
               Application managed services for South African businesses. We
-              maintain, support, and improve the software you already depend on
-              — regardless of who built it.
+              maintain, support, and improve the software you already depend on.
+            </p>
+            <p className="text-slate-400 text-xs max-w-md mb-6">
+              TR Application Development is a division of TR Software
+              Development Consulting (Pty) Ltd, focused on enterprise
+              application development and systems integration.
             </p>
             <p className="text-tech-blue font-semibold text-sm">
               We keep your systems running.
@@ -52,6 +56,14 @@ export default function Footer() {
                   className="text-slate-400 hover:text-tech-blue transition-colors"
                 >
                   Integration & APIs
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/services"
+                  className="text-slate-400 hover:text-tech-blue transition-colors"
+                >
+                  Front-End Maintenance
                 </Link>
               </li>
               <li>
@@ -98,8 +110,8 @@ export default function Footer() {
 
         <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-400">
           <p>
-            © {new Date().getFullYear()} TR Software Development Consulting. All
-            rights reserved.
+            © {new Date().getFullYear()} TR Software Development Consulting
+            (Pty) Ltd. All rights reserved rights reserved.
           </p>
           <p className="text-xs">African Business. Reliable Systems.</p>
         </div>

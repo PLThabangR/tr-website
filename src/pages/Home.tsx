@@ -82,7 +82,7 @@ export default function Home() {
             </h1>
             <p className="text-xl text-slate-300 mb-10 leading-relaxed">
               We maintain, support, and improve the software you already depend
-              on — regardless of who built it. CRM, HR, payroll, custom
+              on regardless of who built it. CRM, HR, payroll, custom
               applications, and the integrations between them.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -156,7 +156,7 @@ export default function Home() {
               {
                 icon: BarChart3,
                 title: "Vendor support is costly",
-                desc: "19–25% of license cost annually — and you still wait in a ticket queue.",
+                desc: "19–25% of license cost annually and you still wait in a ticket queue.",
               },
             ].map((item) => (
               <div
@@ -181,7 +181,7 @@ export default function Home() {
         <div className="container-custom">
           <div className="max-w-3xl mb-16">
             <h2 className="mb-4">
-              A named person who knows your system — and responds when something
+              A named person who knows your system and responds when something
               breaks.
             </h2>
             <p className="text-lg text-slate-gray leading-relaxed">
