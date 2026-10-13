@@ -31,7 +31,7 @@ export default function About() {
           </h1>
           <p className="text-xl text-slate-300 max-w-3xl leading-relaxed">
             TR Software Development Consulting was founded in Midrand to fill a
-            gap: most businesses have critical systems, but no one is
+            gap: most businesses have critical systems but no one is
             maintaining them.
           </p>
         </div>
@@ -52,10 +52,10 @@ export default function About() {
                 <p>
                   We built TR to be the answer to that problem. Not another
                   agency trying to sell you a new system. A partner who learns
-                  what you have, documents it, and keeps it running.
+                  what you have, documents it and keeps it running.
                 </p>
                 <p>
-                  We work across .NET, Java, TypeScript, React, Angular, and
+                  We work across .NET, Java, TypeScript, React, Angular and
                   cloud platforms. We maintain systems we did not build. We tell
                   you the truth about what we can and cannot support.
                 </p>
@@ -108,7 +108,7 @@ export default function About() {
               },
               {
                 title: "Transparency",
-                desc: "You know what we are working on, what it costs, and why.",
+                desc: "You know what we are working on, what it costs and why.",
               },
               {
                 title: "Continuity",
@@ -143,16 +143,16 @@ export default function About() {
               TR Software Development Consulting operates alongside TR
               Application Development, a division of the same legal entity
               focused on enterprise application development, systems
-              integration, and cloud deployment.
+              integration and cloud deployment.
             </p>
             <div className="bg-light-blue p-6 rounded-xl border border-tech-blue/20">
               <p className="text-navy text-sm leading-relaxed">
                 <strong>Group structure:</strong> TR Software Development
                 Consulting (Pty) Ltd operates two complementary practices
-                Application Managed Services (this brand) and TR Application
-                Development (a division for new builds, integrations, and cloud
+                Application Managed Services and TR Application
+                Development (a division for new builds, integrations and cloud
                 deployment). Clients benefit from a single relationship that
-                spans the full lifecycle: build, deploy, support, and enhance.
+                spans the full lifecycle: build, deploy, support and enhance.
               </p>
             </div>
           </div>

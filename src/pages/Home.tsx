@@ -16,13 +16,13 @@ export default function Home() {
       icon: ShieldCheck,
       title: "Application Managed Services",
       description:
-        "Ongoing maintenance, bug fixes, enhancements, and support for your existing systems.",
+        "Ongoing maintenance, bug fixes, enhancements and support for your existing systems.",
     },
     {
       icon: Wrench,
       title: "Application Maintenance",
       description:
-        "Updates, security patches, dependency management, and technical debt reduction.",
+        "Updates, security patches, dependency management and technical debt reduction.",
     },
     {
       icon: Plug,
@@ -34,7 +34,7 @@ export default function Home() {
       icon: BarChart3,
       title: "Reporting & Automation",
       description:
-        "Dashboards, reports, and workflow automation that reduce manual work.",
+        "Dashboards, reports and workflow automation that reduce manual work.",
     },
   ];
 
@@ -57,7 +57,7 @@ export default function Home() {
     {
       num: "04",
       title: "Ongoing Support",
-      desc: "We maintain, fix, and improve your system month by month.",
+      desc: "We maintain, fix and improve your system month by month.",
     },
   ];
 
@@ -81,9 +81,9 @@ export default function Home() {
               We keep your business systems running.
             </h1>
             <p className="text-xl text-slate-300 mb-10 leading-relaxed">
-              We maintain, support, and improve the software you already depend
+              We maintain, support and improve the software you already depend
               on regardless of who built it. CRM, HR, payroll, custom
-              applications, and the integrations between them.
+              applications and the integrations between them.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link to="/contact" className="btn-primary">
@@ -186,8 +186,8 @@ export default function Home() {
             </h2>
             <p className="text-lg text-slate-gray leading-relaxed">
               TR Software Development Consulting provides ongoing maintenance,
-              support, and improvement for the applications your business
-              depends on. We work across .NET, Java, TypeScript, React, Angular,
+              support and improvement for the applications your business
+              depends on. We work across .NET, Java, TypeScript, React, Angular
               and cloud platforms. We maintain systems we did not build.
             </p>
           </div>
@@ -230,7 +230,7 @@ export default function Home() {
               },
               {
                 title: "We maintain systems we did not build",
-                desc: "We learn your system, document it, and become the person you can call.",
+                desc: "We learn your system, document it and become the person you can call.",
               },
               {
                 title: "SME-appropriate pricing",
@@ -294,7 +294,7 @@ export default function Home() {
         <div className="relative container-custom text-center">
           <h2 className="text-white mb-4">Start with a System Health Check</h2>
           <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto leading-relaxed">
-            A fixed-fee assessment of your system's current state, risks, and
+            A fixed-fee assessment of your system's current state, risks and
             quick wins. No commitment beyond the assessment.
           </p>
           <Link to="/contact" className="btn-primary">

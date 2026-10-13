@@ -17,7 +17,7 @@ export default function Footer() {
             </div>
             <p className="text-slate-400 text-sm max-w-md mb-6">
               Application managed services for South African businesses. We
-              maintain, support, and improve the software you already depend on.
+              maintain, support and improve the software you already depend on.
             </p>
             <p className="text-slate-400 text-xs max-w-md mb-6">
               TR Application Development is a division of TR Software

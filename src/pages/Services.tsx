@@ -34,7 +34,7 @@ export default function Services() {
       description:
         "Supporting HR and payroll systems so your people are paid correctly and on time.",
       features: [
-        "Sage, SimplePay, and similar platforms",
+        "Sage, SimplePay and similar platforms",
         "Employee data workflows",
         "Leave and payroll integrations",
         "SARS compliance support",
@@ -83,9 +83,9 @@ export default function Services() {
       icon: MonitorSmartphone,
       title: "Front-End Application Maintenance",
       description:
-        "Angular, React, and JavaScript applications need ongoing maintenance just like backends. Browser updates, library deprecations, and third-party API changes all break front-ends over time. We fix them, update them and keep them working.",
+        "Angular, React and JavaScript applications need ongoing maintenance just like backends. Browser updates, library deprecations and third-party API changes all break front-ends over time. We fix them, update them to keep them working.",
       features: [
-        "Bug fixes in Angular, React, and JavaScript/TypeScript",
+        "Bug fixes in Angular, React and JavaScript/TypeScript",
         "Dependency and framework updates",
         "Browser compatibility fixes",
         "Performance optimisation",
@@ -97,7 +97,7 @@ export default function Services() {
       icon: Code2,
       title: "Custom Development",
       description:
-        "Building features, modules, and extensions that your existing systems do not have.",
+        "Building features, modules and extensions that your existing systems do not have.",
       features: [
         "Custom features and modules",
         "Application extensions",
@@ -110,7 +110,7 @@ export default function Services() {
       icon: BarChart3,
       title: "Reporting & Automation",
       description:
-        "Dashboards, reports, and workflow automation that reduce manual work.",
+        "Dashboards, reports and workflow automation that reduce manual work.",
       features: [
         "Dashboard development",
         "Report generation and maintenance",

@@ -9,7 +9,7 @@ export default function Work() {
       client: "Mid-sized short-term insurer",
       status: "Completed",
       summary:
-        "A full-stack motor insurance management application built end-to-end on .NET, React, TypeScript, SQL Server, and Azure.",
+        "A full-stack motor insurance management application built end-to-end on .NET, React, TypeScript, SQL Server and Azure.",
       outcomes: [
         "Policy and quote management in a single system",
         "Digital claims workflow replacing email approvals",
@@ -32,7 +32,7 @@ export default function Work() {
       client: "Professional services firm",
       status: "In Development",
       summary:
-        "A staff portal with workflow digitisation, role-based access, and audit trails for a mid-market professional services firm.",
+        "A staff portal with workflow digitisation, role-based access and audit trails for a mid-market professional services firm.",
       outcomes: [
         "Digital leave requests and approvals",
         "Document repository with permissions",
@@ -47,7 +47,7 @@ export default function Work() {
       client: "Confidential",
       status: "Planned",
       summary:
-        "A workflow digitisation platform for replacing paper-based and email-based approvals with auditable digital processes.",
+        "A workflow digitisation platform for replacing paper based and email-based approvals with auditable digital processes.",
       outcomes: [
         "Configurable approval flows",
         "Digital forms with validation",
@@ -67,7 +67,7 @@ export default function Work() {
             Our Work
           </div>
           <h1 className="text-white mb-4 max-w-3xl">
-            Systems we have maintained, fixed, and improved.
+            Systems we have maintained,fixed and improved.
           </h1>
           <p className="text-xl text-slate-300 max-w-3xl leading-relaxed">
             Every engagement begins with understanding what is already there.
@@ -153,7 +153,7 @@ export default function Work() {
             Want to see a detailed case study?
           </h2>
           <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto leading-relaxed">
-            We can walk you through a completed project architecture, decisions,
+            We can walk you through a completed project architecture, decisions
             and outcomes. No sales pitch just the technical story.
           </p>
           <Link to="/contact" className="btn-primary">
