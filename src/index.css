@@ -1,7 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
 @import "tailwindcss";
 
 @theme {
+  /* Brand Colours - Restrained */
   --color-navy: #0A1628;
   --color-tech-blue: #2563EB;
   --color-african-green: #059669;
@@ -16,49 +17,39 @@
 }
 
 @layer base {
-  html {
-    scroll-behavior: smooth;
-  }
-  body {
-    @apply font-sans text-dark-gray bg-white antialiased;
-  }
-  h1 {
-    @apply text-4xl md:text-5xl lg:text-6xl font-bold text-navy tracking-tight;
-  }
-  h2 {
-    @apply text-3xl md:text-4xl font-bold text-navy tracking-tight;
-  }
-  h3 {
-    @apply text-2xl font-semibold text-navy;
-  }
-  h4 {
-    @apply text-lg font-semibold text-navy;
-  }
+  html { scroll-behavior: smooth; }
+  body { @apply font-sans text-dark-gray bg-white antialiased; }
+  h1 { @apply text-4xl md:text-5xl font-bold text-navy tracking-tight leading-tight; }
+  h2 { @apply text-3xl font-bold text-navy tracking-tight; }
+  h3 { @apply text-2xl font-semibold text-navy; }
+  h4 { @apply text-lg font-semibold text-navy; }
 }
 
 @layer components {
-  .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 bg-tech-blue text-white font-semibold px-6 py-3 rounded-lg hover:bg-blue-700 active:scale-[0.98] transition-all duration-200 shadow-sm hover:shadow-md;
+  /* Flat, deliberate buttons */
+  .btn-primary { 
+    @apply inline-flex items-center justify-center gap-2 bg-tech-blue text-white font-medium px-6 py-3 rounded-md hover:bg-blue-700 transition-colors; 
   }
-  .btn-secondary {
-    @apply inline-flex items-center justify-center gap-2 bg-white text-tech-blue font-semibold px-6 py-3 rounded-lg border-2 border-tech-blue hover:bg-light-blue active:scale-[0.98] transition-all duration-200;
+  .btn-secondary { 
+    @apply inline-flex items-center justify-center gap-2 bg-white text-navy font-medium px-6 py-3 rounded-md border border-slate-300 hover:border-navy hover:bg-slate-50 transition-colors; 
   }
-  .btn-ghost {
-    @apply inline-flex items-center justify-center gap-2 text-white font-semibold px-6 py-3 rounded-lg border-2 border-white/30 hover:bg-white/10 active:scale-[0.98] transition-all duration-200;
+  .btn-ghost { 
+    @apply inline-flex items-center justify-center gap-2 text-white font-medium px-6 py-3 rounded-md border border-slate-600 hover:bg-slate-800 transition-colors; 
   }
-  .container-custom {
-    @apply max-w-6xl mx-auto px-6;
+  
+  .container-custom { @apply max-w-5xl mx-auto px-6; }
+  .section-padding { @apply py-16 md:py-24; }
+  
+  /* Clean borders instead of floating cards */
+  .card { 
+    @apply bg-white p-6 border border-slate-200 hover:border-slate-300 transition-colors; 
   }
-  .section-padding {
-    @apply py-16 md:py-24;
+  
+  .tech-tag { 
+    @apply inline-flex items-center px-2.5 py-1 rounded text-xs font-mono bg-slate-100 text-slate-700 border border-slate-200; 
   }
-  .card {
-    @apply bg-white p-8 rounded-xl border border-slate-200 hover:border-tech-blue/30 hover:shadow-lg transition-all duration-300;
-  }
-  .card-icon {
-    @apply w-12 h-12 rounded-lg bg-light-blue flex items-center justify-center text-tech-blue mb-4;
-  }
-  .badge {
-    @apply inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-african-green/10 text-african-green;
+  
+  .status-dot { 
+    @apply w-2 h-2 rounded-full bg-african-green inline-block mr-2; 
   }
 }

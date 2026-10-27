@@ -3,190 +3,189 @@ import {
   Check,
   ArrowRight,
   FileText,
-  Search,
-  Lightbulb,
-  Map,
 } from "lucide-react";
 
 export default function HealthCheck() {
-  const assessments = [
-    "Application code and architecture",
-    "Database structure and health",
-    "Integrations with other systems",
-    "Security posture",
-    "Performance and scalability risks",
-    "Documentation and maintainability",
-    "Front-end dependencies and browser compatibility",
-    "Existing user enhancement backlog",
-  ];
-
-  const deliverables = [
-    "Current state assessment",
-    "Identified risks and vulnerabilities",
-    "Quick wins (issues that can be resolved easily)",
-    "Recommended roadmap (maintain, improve or replace)",
-  ];
-
-  const steps = [
-    {
-      icon: Search,
-      title: "Initial conversation",
-      desc: "We learn about your system and what is not working.",
-    },
-    {
-      icon: FileText,
-      title: "Access and assessment",
-      desc: "You grant us access. We assess the system and document findings.",
-    },
-    {
-      icon: Lightbulb,
-      title: "Report and findings",
-      desc: "We present the report and discuss what we found.",
-    },
-    {
-      icon: Map,
-      title: "Recommended roadmap",
-      desc: "We recommend maintenance, improvement, or replacement whichever is right.",
-    },
-  ];
-
   return (
     <>
-      <section className="bg-navy text-white section-padding relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-navy via-deep-navy to-navy" />
-        <div className="relative container-custom">
-          <div className="badge mb-6 bg-african-green/20 text-african-green">
-            Entry Product
+      <section className="bg-navy text-white border-b border-slate-800">
+        <div className="container-custom py-20 md:py-24">
+          <div className="max-w-3xl">
+            <div className="font-mono text-sm text-tech-blue mb-4 uppercase tracking-wider">
+              Signature Service
+            </div>
+            <h1 className="text-white mb-6">System Health Check</h1>
+            <p className="text-lg md:text-xl text-slate-300 mb-8 leading-relaxed max-w-2xl">
+              A structured assessment of an existing business system. We
+              investigate reliability, performance, maintainability and
+              integration risks and give you a clear prioritised roadmap.
+            </p>
           </div>
-          <h1 className="text-white mb-4 max-w-3xl">System Health Check</h1>
-          <p className="text-xl text-slate-300 max-w-3xl leading-relaxed">
-            A fixed-fee assessment of your existing system. Find out what you
-            have, what is at risk and what to do next.
-          </p>
         </div>
       </section>
 
       <section className="section-padding">
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-            <div className="lg:col-span-2 space-y-16">
+            {/* Main Content */}
+            <div className="lg:col-span-2 space-y-12">
               <div>
-                <h2 className="mb-6">What we assess</h2>
-                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  {assessments.map((item) => (
-                    <li key={item} className="flex gap-3 items-start">
-                      <Check
-                        className="text-african-green flex-shrink-0 mt-1"
-                        size={18}
-                      />
-                      <span className="text-slate-gray">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <div>
-                <h2 className="mb-6">What you receive</h2>
-                <p className="text-slate-gray mb-4">
-                  A written report containing:
-                </p>
-                <ul className="space-y-3">
-                  {deliverables.map((item) => (
-                    <li key={item} className="flex gap-3 items-start">
-                      <Check
-                        className="text-african-green flex-shrink-0 mt-1"
-                        size={18}
-                      />
-                      <span className="text-slate-gray">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <div>
-                <h2 className="mb-8">How it works</h2>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                  {steps.map((step, index) => (
+                <h2 className="mb-4">What we assess</h2>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {[
+                    "Application code and architecture",
+                    "Database structure and health",
+                    "Integrations with other systems",
+                    "Security posture and access control",
+                    "Performance and scalability risks",
+                    "Documentation and maintainability",
+                  ].map((item) => (
                     <div
-                      key={step.title}
-                      className="bg-slate-50 p-6 rounded-xl border border-slate-200"
+                      key={item}
+                      className="flex gap-3 items-start bg-slate-50 p-4 border border-slate-200 rounded-md"
                     >
-                      <div className="flex items-center gap-3 mb-3">
-                        <div className="w-10 h-10 rounded-lg bg-tech-blue/10 flex items-center justify-center text-tech-blue">
-                          <step.icon size={20} />
+                      <Check
+                        className="text-african-green shrink-0 mt-0.5"
+                        size={18}
+                      />
+                      <span className="text-slate-700 text-sm">{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div>
+                <h2 className="mb-4">What you receive</h2>
+                <p className="text-slate-600 mb-6">
+                  A written technical report containing:
+                </p>
+                <ul className="space-y-4">
+                  {[
+                    {
+                      title: "Current state assessment",
+                      desc: "A clear explanation of what is working and what is fragile.",
+                    },
+                    {
+                      title: "Prioritised risk register",
+                      desc: "Identified risks ranked by severity and business impact.",
+                    },
+                    {
+                      title: "Quick wins",
+                      desc: "Issues that can be resolved easily to provide immediate stability.",
+                    },
+                    {
+                      title: "Improvement roadmap",
+                      desc: "A recommended path forward — maintain, improve, or replace.",
+                    },
+                  ].map((item) => (
+                    <li key={item.title} className="flex gap-4">
+                      <FileText
+                        className="text-tech-blue shrink-0 mt-1"
+                        size={20}
+                      />
+                      <div>
+                        <div className="font-semibold text-navy">
+                          {item.title}
                         </div>
-                        <span className="text-sm font-mono text-slate-gray">
-                          Step {index + 1}
-                        </span>
+                        <div className="text-slate-600 text-sm mt-1">
+                          {item.desc}
+                        </div>
                       </div>
-                      <h4 className="mb-2">{step.title}</h4>
-                      <p className="text-slate-gray text-sm leading-relaxed">
-                        {step.desc}
-                      </p>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div>
+                <h2 className="mb-6">How it works</h2>
+                <div className="space-y-6">
+                  {[
+                    {
+                      step: "1",
+                      title: "Initial conversation",
+                      desc: "We discuss the system, the constraints, and the specific problems.",
+                    },
+                    {
+                      step: "2",
+                      title: "Access and assessment",
+                      desc: "You grant us scoped access to the code, database, and infrastructure.",
+                    },
+                    {
+                      step: "3",
+                      title: "Report and findings",
+                      desc: "We present the written report and walk you through what we found.",
+                    },
+                    {
+                      step: "4",
+                      title: "Recommended roadmap",
+                      desc: "You decide whether to proceed with improvements or ongoing support.",
+                    },
+                  ].map((item) => (
+                    <div key={item.step} className="flex gap-4">
+                      <div className="flex-shrink-0 w-8 h-8 rounded bg-slate-100 border border-slate-200 flex items-center justify-center font-mono text-sm font-bold text-slate-600">
+                        {item.step}
+                      </div>
+                      <div>
+                        <h4 className="mb-1">{item.title}</h4>
+                        <p className="text-slate-600 text-sm">{item.desc}</p>
+                      </div>
                     </div>
                   ))}
                 </div>
               </div>
             </div>
 
+            {/* Sidebar */}
             <div className="lg:col-span-1">
-              <div className="bg-light-blue p-8 rounded-xl lg:sticky lg:top-24">
-                <h4 className="mb-4">Investment</h4>
-                <p className="text-4xl font-bold text-navy mb-2">
+              <div className="bg-slate-50 p-6 border border-slate-200 rounded-lg sticky top-24">
+                <h4 className="mb-2">Investment</h4>
+                <div className="text-3xl font-bold text-navy mb-2">
                   R8,500 – R35,000
-                </p>
-                <p className="text-slate-gray mb-6 text-sm">
-                  Depending on scope. Payment 100% upfront.
-                </p>
-                <Link to="/contact" className="btn-primary w-full">
-                  Book your health check
-                  <ArrowRight size={18} />
-                </Link>
-                <p className="text-sm text-slate-gray mt-4">
-                  No commitment beyond the assessment.
+                </div>
+                <p className="text-slate-600 text-sm mb-6 pb-6 border-b border-slate-200">
+                  Depending on the scope and complexity of the system. Payment
+                  is 100% upfront.
                 </p>
 
-                <div className="mt-8 pt-8 border-t border-tech-blue/20">
-                  <h4 className="mb-3 text-sm">Pricing tiers</h4>
-                  <div className="space-y-4 text-sm">
-                    <div>
-                      <div className="flex justify-between mb-1">
-                        <span className="text-slate-gray font-semibold">
-                          Mini Health Check
-                        </span>
-                        <span className="font-mono font-semibold">
-                          R8,500 – R12,000
-                        </span>
-                      </div>
-                      <div className="text-xs text-slate-gray">
-                        1–2 days, lighter deliverable
-                      </div>
+                <div className="space-y-4 mb-6">
+                  <div>
+                    <div className="flex justify-between text-sm font-semibold text-navy mb-1">
+                      <span>Mini Health Check</span>
+                      <span className="font-mono">R8,500 – R12,000</span>
                     </div>
-                    <div>
-                      <div className="flex justify-between mb-1">
-                        <span className="text-slate-gray font-semibold">
-                          Full Health Check
-                        </span>
-                        <span className="font-mono font-semibold">
-                          R25,000 – R35,000
-                        </span>
-                      </div>
-                      <div className="text-xs text-slate-gray">
-                        5 days, comprehensive report
-                      </div>
+                    <div className="text-xs text-slate-500">
+                      1–2 days. Focused on immediate risks.
+                    </div>
+                  </div>
+                  <div>
+                    <div className="flex justify-between text-sm font-semibold text-navy mb-1">
+                      <span>Full Health Check</span>
+                      <span className="font-mono">R25,000 – R35,000</span>
+                    </div>
+                    <div className="text-xs text-slate-500">
+                      5 days. Comprehensive review and roadmap.
                     </div>
                   </div>
                 </div>
+
+                <Link to="/contact" className="btn-primary w-full mb-4">
+                  Book a Health Check
+                  <ArrowRight size={18} />
+                </Link>
+                <p className="text-xs text-slate-500 text-center">
+                  No commitment beyond the assessment.
+                </p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="section-padding bg-slate-50">
-        <div className="container-custom">
+      {/* FAQ */}
+      <section className="section-padding bg-slate-50 border-t border-slate-200">
+        <div className="container-custom max-w-3xl">
           <h2 className="mb-8">Frequently asked questions</h2>
-          <div className="space-y-4 max-w-3xl">
+          <div className="space-y-6">
             {[
               {
                 q: "What access do you need?",
@@ -209,12 +208,9 @@ export default function HealthCheck() {
                 a: "We will tell you during the initial conversation. If we cannot provide value, we will say so and not take the engagement.",
               },
             ].map((faq) => (
-              <div
-                key={faq.q}
-                className="bg-white p-6 rounded-xl border border-slate-200"
-              >
-                <h4 className="mb-2">{faq.q}</h4>
-                <p className="text-slate-gray text-sm leading-relaxed">
+              <div key={faq.q} className="border-b border-slate-200 pb-6">
+                <h4 className="mb-2 text-navy">{faq.q}</h4>
+                <p className="text-slate-600 text-sm leading-relaxed">
                   {faq.a}
                 </p>
               </div>

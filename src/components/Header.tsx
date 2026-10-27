@@ -16,54 +16,36 @@ export default function Header() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-[#0e1129] backdrop-blur-md border-b border-white/10">
+    <header className="sticky top-0 z-50 bg-navy border-b border-slate-800">
       <div className="container-custom flex items-center justify-between py-4">
-        {/* Logo */}
         <Link to="/" className="flex items-center gap-3 group">
-          <img
-            src="/TRLogo.png"
-            alt="TR Software Development Consulting"
-            className="h-8 w-auto md:hidden"
-          />
-
-          <img
-            src="/TRLogoHorBGBlue.png"
-            alt="TR Software Development Consulting"
-            className="h-16 w-auto hidden md:block"
-          />
+          <div className="w-8 h-8 bg-tech-blue flex items-center justify-center font-bold text-white text-sm">
+            TR
+          </div>
+          <span className="hidden md:block font-semibold text-sm text-white tracking-wide">
+            TR SOFTWARE DEVELOPMENT CONSULTING
+          </span>
         </Link>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-1">
+        <nav className="hidden md:flex items-center gap-6">
           {navLinks.map((link) => (
             <Link
               key={link.to}
               to={link.to}
-              className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+              className={`text-sm font-medium transition-colors ${
                 location.pathname === link.to
-                  ? "text-tech-blue bg-white/5"
-                  : "text-white/80 hover:text-white hover:bg-white/5"
+                  ? "text-tech-blue"
+                  : "text-slate-300 hover:text-white"
               }`}
             >
               {link.label}
             </Link>
           ))}
-
-          {/* AppDev External Website */}
-          <a
-            href="https://tra-applicationdev.vercel.app/"
-            className="px-4 py-2 rounded-lg text-sm font-semibold text-tech-blue hover:text-white hover:bg-tech-blue/10 transition-colors"
-          >
-            AppDev
-          </a>
-
-          {/* CTA */}
-          <Link to="/contact" className="btn-primary text-sm ml-4">
+          <Link to="/contact" className="btn-primary py-2 px-4 text-sm ml-4">
             Book a Health Check
           </Link>
         </nav>
 
-        {/* Mobile Menu Button */}
         <button
           className="md:hidden text-white p-2"
           onClick={() => setMenuOpen(!menuOpen)}
@@ -73,35 +55,23 @@ export default function Header() {
         </button>
       </div>
 
-      {/* Mobile Navigation */}
       {menuOpen && (
-        <nav className="md:hidden bg-navy border-t border-white/10 animate-in slide-in-from-top-2">
+        <nav className="md:hidden bg-navy border-t border-slate-800">
           <div className="container-custom py-4 flex flex-col gap-2">
             {navLinks.map((link) => (
               <Link
                 key={link.to}
                 to={link.to}
                 onClick={() => setMenuOpen(false)}
-                className={`px-4 py-3 rounded-lg text-sm font-medium transition-colors ${
+                className={`px-4 py-3 text-sm font-medium ${
                   location.pathname === link.to
                     ? "text-tech-blue bg-white/5"
-                    : "text-white/80 hover:text-white hover:bg-white/5"
+                    : "text-slate-300 hover:text-white"
                 }`}
               >
                 {link.label}
               </Link>
             ))}
-
-            {/* Mobile AppDev External Website */}
-            <a
-              href="https://trapplicationdev.co.za"
-              onClick={() => setMenuOpen(false)}
-              className="px-4 py-3 rounded-lg text-sm font-semibold text-tech-blue hover:text-white hover:bg-tech-blue/10 transition-colors"
-            >
-              AppDev
-            </a>
-
-            {/* Mobile CTA */}
             <Link
               to="/contact"
               onClick={() => setMenuOpen(false)}
