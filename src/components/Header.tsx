@@ -49,6 +49,14 @@ export default function Header() {
               {link.label}
             </Link>
           ))}
+
+          <a
+            href="https://tra-applicationdev.vercel.app/"
+            className="text-sm font-semibold text-tech-blue hover:text-white transition-colors"
+          >
+            AppDev
+          </a>
+
           <Link to="/contact" className="btn-primary py-2 px-4 text-sm ml-4">
             Book a Health Check
           </Link>
@@ -62,7 +70,7 @@ export default function Header() {
           {menuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
-
+      {/* Mobile navigation */}
       {menuOpen && (
         <nav className="md:hidden bg-navy border-t border-slate-800">
           <div className="container-custom py-4 flex flex-col gap-2">
@@ -80,6 +88,17 @@ export default function Header() {
                 {link.label}
               </Link>
             ))}
+
+            <a
+              href="https://tra-applicationdev.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-4 py-3 text-sm font-semibold text-tech-blue hover:text-white"
+              onClick={() => setMenuOpen(false)}
+            >
+              AppDev ↗
+            </a>
+
             <Link
               to="/contact"
               onClick={() => setMenuOpen(false)}
