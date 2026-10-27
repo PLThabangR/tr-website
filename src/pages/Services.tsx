@@ -5,7 +5,7 @@ export default function Services() {
   const services = [
     {
       title: "Application Managed Services",
-      desc: "Ongoing maintenance, support, and incremental improvement for the software your business already depends on.",
+      desc: "Ongoing maintenance, support and incremental improvement for the software your business already depends on.",
       points: [
         "Incident support and bug fixes",
         "Security patching and dependency updates",
@@ -16,7 +16,7 @@ export default function Services() {
     },
     {
       title: "System Health Check",
-      desc: "A structured, fixed-fee assessment of an existing application's current state, risks, and roadmap.",
+      desc: "A structured, fixed-fee assessment of an existing application's current state, risks and roadmap.",
       points: [
         "Code and architecture review",
         "Database and integration assessment",
@@ -27,7 +27,7 @@ export default function Services() {
     },
     {
       title: "Integration & API Support",
-      desc: "Connecting systems so data flows reliably between them, and fixing integrations that have stopped working.",
+      desc: "Connecting systems so data flows reliably between them and fixing integrations that have stopped working.",
       points: [
         "REST API development and maintenance",
         "Webhook configuration",
@@ -64,14 +64,14 @@ export default function Services() {
     <>
       <section className="bg-navy text-white border-b border-slate-800">
         <div className="container-custom py-20 md:py-24">
-          <div className="max-w-3xl">
+          <div className="max-w-4xl">
             <div className="font-mono text-sm text-tech-blue mb-4 uppercase tracking-wider">
               Services
             </div>
             <h1 className="text-white mb-6">What we do</h1>
-            <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl">
+            <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-4xl">
               We focus on the practical, ongoing work required to keep business
-              systems stable, secure, and useful.
+              systems stable, secure and useful.
             </p>
           </div>
         </div>

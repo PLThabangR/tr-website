@@ -10,12 +10,12 @@ export default function HealthCheck() {
     <>
       <section className="bg-navy text-white border-b border-slate-800">
         <div className="container-custom py-20 md:py-24">
-          <div className="max-w-3xl">
+          <div className="max-w-4xl">
             <div className="font-mono text-sm text-tech-blue mb-4 uppercase tracking-wider">
               Signature Service
             </div>
             <h1 className="text-white mb-6">System Health Check</h1>
-            <p className="text-lg md:text-xl text-slate-300 mb-8 leading-relaxed max-w-2xl">
+            <p className="text-lg md:text-xl text-slate-300 mb-8 leading-relaxed max-w-4xl">
               A structured assessment of an existing business system. We
               investigate reliability, performance, maintainability and
               integration risks and give you a clear prioritised roadmap.

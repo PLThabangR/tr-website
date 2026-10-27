@@ -14,7 +14,7 @@ export default function Home() {
     {
       icon: AlertTriangle,
       title: "Unreliable applications",
-      desc: "Software that crashes, loads slowly, or behaves inconsistently, disrupting daily operations.",
+      desc: "Software that crashes, loads slowly or behaves inconsistently, disrupting daily operations.",
     },
     {
       icon: Plug,
@@ -51,7 +51,7 @@ export default function Home() {
     },
     {
       title: "Application Improvements",
-      desc: "Building the specific features, reports, and dashboards your business actually needs.",
+      desc: "Building the specific features, reports and dashboards your business actually needs.",
       link: "/services",
     },
   ];
@@ -61,16 +61,15 @@ export default function Home() {
       {/* Section 1: Hero */}
       <section className="bg-navy text-white border-b border-slate-800">
         <div className="container-custom py-20 md:py-28">
-          <div className="max-w-3xl">
+          <div className="max-w-4xl">
             <div className="font-mono text-sm text-tech-blue mb-4 uppercase tracking-wider">
-              TR Software Development Consulting
+              TR Software Development 
             </div>
             <h1 className="text-white mb-6">
               We keep your business systems running.
             </h1>
-            <p className="text-lg md:text-xl text-slate-300 mb-8 leading-relaxed max-w-2xl">
-              We help businesses troubleshoot, maintain and improve existing
-              applications, integrations and business workflows — so technical
+            <p className="text-lg md:text-xl text-slate-300 mb-8 leading-relaxed max-w-4xl">
+              We help businesses troubleshoot, maintain and improve existing applications, integrations and business workflows  so technical
               problems don't keep getting in the way of daily operations.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -82,7 +81,7 @@ export default function Home() {
                 View our services
               </Link>
             </div>
-            <div className="mt-8 text-sm font-mono text-slate-400">
+            <div className="mt-8 text-sm font-mono text-african-green">
               Application support · Integrations · Performance · Technical
               improvements
             </div>

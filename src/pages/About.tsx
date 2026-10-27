@@ -6,7 +6,7 @@ export default function About() {
     <>
       <section className="bg-navy text-white border-b border-slate-800">
         <div className="container-custom py-20 md:py-24">
-          <div className="max-w-3xl">
+          <div className="max-w-4xl">
             <h1 className="text-white mb-6">
               We look after the software your business already depends on.
             </h1>

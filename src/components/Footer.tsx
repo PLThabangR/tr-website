@@ -10,7 +10,7 @@ export default function Footer() {
           <div className="md:col-span-2">
             <div className="flex items-center gap-3 mb-4">
               <img
-                src="/TRLogoHor.png"
+                src="/TRBannerBgClear.png"
                 alt="TR Software Development Consulting"
                 className="h-10 w-auto"
               />

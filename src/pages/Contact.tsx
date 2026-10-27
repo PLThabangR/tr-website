@@ -23,7 +23,7 @@ export default function Contact() {
     <>
       <section className="bg-navy text-white border-b border-slate-800">
         <div className="container-custom py-16">
-          <div className="max-w-3xl">
+          <div className="max-w-4xl">
             <h1 className="text-white mb-4">Contact</h1>
             <p className="text-lg text-slate-300">
               Tell us about the system that is causing problems. We will respond

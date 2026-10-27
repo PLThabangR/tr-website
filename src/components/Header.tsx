@@ -9,7 +9,7 @@ export default function Header() {
   const navLinks = [
     { to: "/", label: "Home" },
     { to: "/services", label: "Services" },
-    { to: "/health-check", label: "Health Check" },
+    { to: "/health-check", label: "Health" },
     { to: "/work", label: "Work" },
     { to: "/about", label: "About" },
     { to: "/contact", label: "Contact" },
@@ -18,14 +18,22 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 bg-navy border-b border-slate-800">
       <div className="container-custom flex items-center justify-between py-4">
-        <Link to="/" className="flex items-center gap-3 group">
-          <div className="w-8 h-8 bg-tech-blue flex items-center justify-center font-bold text-white text-sm">
-            TR
-          </div>
-          <span className="hidden md:block font-semibold text-sm text-white tracking-wide">
-            TR SOFTWARE DEVELOPMENT CONSULTING
-          </span>
-        </Link>
+        <a
+          href="https://trsoftwaredev.vercel.app/"
+          className="flex items-center gap-3 group"
+        >
+          <img
+            src="/TRBannerBgClear.png"
+            alt="TR Software Development Consulting"
+            className="h-8 w-auto md:hidden"
+          />
+
+          <img
+            src="/TRBannerBgClear.png"
+            alt="TR Software Development Consulting"
+            className="h-16 w-auto hidden md:block"
+          />
+        </a>
 
         <nav className="hidden md:flex items-center gap-6">
           {navLinks.map((link) => (
