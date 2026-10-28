@@ -101,7 +101,7 @@ export default function Footer() {
                   href="tel:+27696350962"
                   className="hover:text-tech-blue transition-colors"
                 >
-                  (+27) 69 635 0962
+                  (+27) 70 762 0683
                 </a>
               </li>
             </ul>

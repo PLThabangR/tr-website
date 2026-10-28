@@ -26,14 +26,14 @@ export default function HealthCheck() {
     },
     {
       title: "Improvement roadmap",
-      desc: "A recommended path forward — maintain, improve, or replace.",
+      desc: "A recommended path forward maintain, improve or replace.",
     },
   ];
 
   const faqs = [
     {
       q: "What access do you need?",
-      a: "Source code repository, database with read access, cloud console with appropriately scoped access, and any existing documentation.",
+      a: "Source code repository, database with read access, cloud console with appropriately scoped access and any existing documentation.",
     },
     {
       q: "How long does it take?",
@@ -63,7 +63,7 @@ export default function HealthCheck() {
 
             <p className="text-lg md:text-xl text-text-secondary leading-relaxed max-w-2xl">
               A fixed-fee assessment of your existing system. Find out what you
-              have, what is at risk, and what to do next.
+              have, what is at risk and what to do next.
             </p>
           </div>
         </div>

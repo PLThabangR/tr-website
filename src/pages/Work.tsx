@@ -10,7 +10,7 @@ export default function Work() {
       problem:
         "The client was managing policies, quotes, and claims across disconnected spreadsheets and email threads. There was no single view of risk, and customer queries required phoning the office.",
       solution:
-        "We built a full-stack application to centralise policy administration, claims processing, and customer data.",
+        "We built a full-stack application to centralise policy administration, claims processing and customer data.",
       outcome:
         "The client now has a single source of truth for all policies and a self-service portal for customers to view their status.",
       tech: ["ASP.NET Core", "React", "TypeScript", "SQL Server", "Azure"],
@@ -123,7 +123,7 @@ export default function Work() {
           </h2>
           <p className="text-text-secondary mb-8">
             We can walk you through the architecture and decisions of a
-            completed project. No sales pitch — just the technical story.
+            completed project. No sales pitch just the technical story.
           </p>
           <Link to="/contact" className="btn-ghost">
             Request a Walkthrough

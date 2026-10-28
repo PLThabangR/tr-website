@@ -164,7 +164,7 @@ export default function Home() {
               <h2 className="mb-4 text-black">How we help</h2>
 
               <p className="text-text-muted leading-relaxed">
-                Practical, focused engagements designed to resolve issues and
+                Practical focused engagements designed to resolve issues and
                 improve the systems you already depend on.
               </p>
             </div>
@@ -213,7 +213,7 @@ export default function Home() {
 
             <p className="text-text-secondary">
               We don't guess. We investigate the current state, present our
-              findings, and agree on the next steps before implementing changes.
+              findings and agree on the next steps before implementing changes.
             </p>
           </div>
 
@@ -257,7 +257,7 @@ export default function Home() {
 
               <p className="text-text-muted mb-6 leading-relaxed">
                 A structured assessment of an existing business system. We
-                investigate reliability, performance, maintainability, and
+                investigate reliability, performance, maintainability and
                 integration risks and give you a clear prioritised roadmap for
                 what to do next.
               </p>
