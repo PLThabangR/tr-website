@@ -1,55 +1,70 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
 @import "tailwindcss";
 
 @theme {
-  /* Brand Colours - Restrained */
-  --color-navy: #0A1628;
-  --color-tech-blue: #2563EB;
-  --color-african-green: #059669;
-  --color-gold: #F59E0B;
-  --color-slate-gray: #64748B;
-  --color-light-blue: #DBEAFE;
-  --color-dark-gray: #1E293B;
-  --color-deep-navy: #0F172A;
+  /* New Brand Colours */
+  --color-bg-main: #100E0F;
+  --color-gold: #DEAB5F;
+  --color-gold-hover: #C99549;
+  --color-btn-text: #312E2E;
+  --color-text-primary: #F7F4EF;
+  --color-text-secondary: #B9B2AA;
+  --color-border-subtle: #383235;
+ 
+  /* Light section colours */
+  --color-black: #000000;
+  --color-white: #FFFFFF;
+  --color-text-dark: #1E293B;
+  --color-text-muted: #475569;
+  --color-border-light: #E2E8F0;
 
+  /* Fonts */
   --font-sans: 'Inter', system-ui, sans-serif;
-  --font-mono: 'JetBrains Mono', monospace;
+  --font-serif: 'Playfair Display', serif;
 }
 
 @layer base {
   html { scroll-behavior: smooth; }
-  body { @apply font-sans text-dark-gray bg-white antialiased; }
-  h1 { @apply text-4xl md:text-5xl font-bold text-navy tracking-tight leading-tight; }
-  h2 { @apply text-3xl font-bold text-navy tracking-tight; }
-  h3 { @apply text-2xl font-semibold text-navy; }
-  h4 { @apply text-lg font-semibold text-navy; }
+  body { 
+    @apply font-sans bg-bg-main text-text-primary antialiased; 
+  }
+  h1 { 
+    @apply text-4xl md:text-5xl font-serif font-bold text-text-primary tracking-tight leading-tight; 
+  }
+  h2 { 
+    @apply text-3xl font-serif font-bold text-text-primary tracking-tight; 
+  }
+  h3 { 
+    @apply text-2xl font-sans font-semibold text-text-primary; 
+  }
+  h4 { 
+    @apply text-lg font-sans font-semibold text-text-primary; 
+  }
 }
 
 @layer components {
-  /* Flat, deliberate buttons */
+  /* Buttons */
   .btn-primary { 
-    @apply inline-flex items-center justify-center gap-2 bg-tech-blue text-white font-medium px-6 py-3 rounded-md hover:bg-blue-700 transition-colors; 
+    @apply inline-flex items-center justify-center gap-2 bg-gold text-btn-text font-medium px-6 py-3 rounded-md hover:bg-gold-hover transition-colors focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2 focus:ring-offset-bg-main; 
   }
   .btn-secondary { 
-    @apply inline-flex items-center justify-center gap-2 bg-white text-navy font-medium px-6 py-3 rounded-md border border-slate-300 hover:border-navy hover:bg-slate-50 transition-colors; 
+    @apply inline-flex items-center justify-center gap-2 bg-transparent text-gold font-medium px-6 py-3 rounded-md border border-gold hover:bg-gold/10 transition-colors focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2 focus:ring-offset-bg-main; 
   }
   .btn-ghost { 
-    @apply inline-flex items-center justify-center gap-2 text-white font-medium px-6 py-3 rounded-md border border-slate-600 hover:bg-slate-800 transition-colors; 
+    @apply inline-flex items-center justify-center gap-2 text-text-secondary font-medium px-6 py-3 rounded-md border border-border-subtle hover:text-text-primary hover:border-text-primary transition-colors; 
   }
   
+  /* Layout */
   .container-custom { @apply max-w-5xl mx-auto px-6; }
   .section-padding { @apply py-16 md:py-24; }
   
-  /* Clean borders instead of floating cards */
+  /* Cards */
   .card { 
-    @apply bg-white p-6 border border-slate-200 hover:border-slate-300 transition-colors; 
+    @apply bg-bg-main p-6 border border-border-subtle hover:border-gold/50 transition-colors rounded-md; 
   }
   
+  /* Tags */
   .tech-tag { 
-    @apply inline-flex items-center px-2.5 py-1 rounded text-xs font-mono bg-slate-100 text-slate-700 border border-slate-200; 
-  }
-  
-  .status-dot { 
-    @apply w-2 h-2 rounded-full bg-african-green inline-block mr-2; 
+    @apply inline-flex items-center px-2.5 py-1 rounded text-xs font-sans bg-bg-main text-text-secondary border border-border-subtle; 
   }
 }

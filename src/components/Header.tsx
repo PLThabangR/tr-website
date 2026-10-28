@@ -9,41 +9,49 @@ export default function Header() {
   const navLinks = [
     { to: "/", label: "Home" },
     { to: "/services", label: "Services" },
-    { to: "/health-check", label: "Health" },
+    { to: "/health-check", label: "Health Check" },
     { to: "/work", label: "Work" },
     { to: "/about", label: "About" },
     { to: "/contact", label: "Contact" },
   ];
 
+  const isActive = (path: string) => location.pathname === path;
+
   return (
-    <header className="sticky top-0 z-50 bg-navy border-b border-slate-800">
+    <header className="sticky top-0 z-50 bg-bg-main border-b border-border-subtle">
       <div className="container-custom flex items-center justify-between py-4">
-        <a
-          href="https://trsoftwaredev.vercel.app/"
+        <Link
+          to="/"
+          aria-label="TR Software Development Consulting home"
           className="flex items-center gap-3 group"
+          onClick={() => setMenuOpen(false)}
         >
           <img
             src="/TRBannerBgClear.png"
             alt="TR Software Development Consulting"
-            className="h-8 w-auto md:hidden"
+            className="h-10 w-auto md:hidden"
           />
 
           <img
             src="/TRBannerBgClear.png"
             alt="TR Software Development Consulting"
-            className="h-16 w-auto hidden md:block"
+            className="h-20 w-auto hidden md:block"
           />
-        </a>
+        </Link>
 
-        <nav className="hidden md:flex items-center gap-6">
+        <nav
+          aria-label="Main navigation"
+          className="hidden md:flex items-center gap-6"
+        >
           {navLinks.map((link) => (
             <Link
               key={link.to}
               to={link.to}
-              className={`text-sm font-medium transition-colors ${
-                location.pathname === link.to
-                  ? "text-tech-blue"
-                  : "text-slate-300 hover:text-white"
+              aria-current={isActive(link.to) ? "page" : undefined}
+              className={`text-sm font-semibold transition-colors ${
+                isActive(link.to)
+                  ? "text-gold"
+                  : "text-text-secondary hover:text-gold"
               }`}
             >
               {link.label}
@@ -52,37 +60,45 @@ export default function Header() {
 
           <a
             href="https://tra-applicationdev.vercel.app/"
-            className="text-sm font-semibold text-tech-blue hover:text-white transition-colors"
+            className="text-sm font-semibold text-text-secondary hover:text-gold transition-colors"
           >
             AppDev
           </a>
 
-          <Link to="/contact" className="btn-primary py-2 px-4 text-sm ml-4">
+          <Link to="/contact" className="btn-primary py-2 px-4 text-sm ml-2">
             Book a Health Check
           </Link>
         </nav>
 
         <button
-          className="md:hidden text-white p-2"
-          onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Toggle menu"
+          type="button"
+          className="md:hidden text-text-primary p-2"
+          onClick={() => setMenuOpen((open) => !open)}
+          aria-label={menuOpen ? "Close menu" : "Open menu"}
+          aria-expanded={menuOpen}
+          aria-controls="mobile-navigation"
         >
           {menuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
-      {/* Mobile navigation */}
+
       {menuOpen && (
-        <nav className="md:hidden bg-navy border-t border-slate-800">
+        <nav
+          id="mobile-navigation"
+          aria-label="Mobile navigation"
+          className="md:hidden bg-bg-main border-t border-border-subtle"
+        >
           <div className="container-custom py-4 flex flex-col gap-2">
             {navLinks.map((link) => (
               <Link
                 key={link.to}
                 to={link.to}
                 onClick={() => setMenuOpen(false)}
-                className={`px-4 py-3 text-sm font-medium ${
-                  location.pathname === link.to
-                    ? "text-tech-blue bg-white/5"
-                    : "text-slate-300 hover:text-white"
+                aria-current={isActive(link.to) ? "page" : undefined}
+                className={`px-4 py-3 text-sm font-medium transition-colors ${
+                  isActive(link.to)
+                    ? "text-gold bg-gold/5"
+                    : "text-text-secondary hover:text-gold"
                 }`}
               >
                 {link.label}
@@ -91,12 +107,9 @@ export default function Header() {
 
             <a
               href="https://tra-applicationdev.vercel.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-4 py-3 text-sm font-semibold text-tech-blue hover:text-white"
-              onClick={() => setMenuOpen(false)}
+              className="px-4 py-3 text-sm font-medium text-text-secondary hover:text-gold transition-colors"
             >
-              AppDev ↗
+              AppDev
             </a>
 
             <Link
