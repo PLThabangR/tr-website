@@ -13,7 +13,17 @@ export default function Work() {
         "We built a full-stack application to centralise policy administration, claims processing and customer data.",
       outcome:
         "The client now has a single source of truth for all policies and a self-service portal for customers to view their status.",
-      tech: ["ASP.NET Core", "React", "TypeScript", "SQL Server", "Azure"],
+      tech: [
+        "ASP.NET Core",
+        "React",
+        "TypeScript",
+        "Postgress",
+        "Redis",
+        "MediatR",
+        "CQRS",
+        "Azure",
+        "Docker",
+      ],
     },
     {
       title: "Staff Portal & Workflow",
@@ -26,6 +36,27 @@ export default function Work() {
       outcome:
         "The system will provide an audit trail for all approvals and eliminate manual data re-entry.",
       tech: ["ASP.NET Core", "Angular", "SQL Server", "Azure"],
+    },
+    {
+      title: "ABC Properties Management System",
+      client: "Property management",
+      status: "Completed",
+      problem:
+        "Managing property listings and agent relationships requires structured data, reliable API endpoints, and a maintainable backend architecture.",
+      solution:
+        "We are building a property management REST API using ASP.NET Core 8, with dedicated application, domain, and infrastructure layers to manage property agents, property listings, and their relationships.",
+      outcome:
+        "The system aims to provide consistent API responses, validated requests, persistent data storage, and Redis caching through a modular backend designed for maintainability and future expansion.",
+      tech: [
+        "C#",
+        "ASP.NET Core 8",
+        "Entity Framework Core",
+        "SQL Server",
+        "Redis",
+        "MediatR",
+        "CQRS",
+        "Docker",
+      ],
     },
   ];
 
