@@ -17,15 +17,15 @@ export default function Footer() {
             </div>
             <p className="text-slate-400 text-sm max-w-md mb-6">
               Application managed services for South African businesses. We
-              maintain, support and improve the software you already depend on.
+              maintain, support and improve the software you already depend on
             </p>
             <p className="text-slate-400 text-xs max-w-md mb-6">
               TR Application Development is a division of TR Software
               Development Consulting (Pty) Ltd, focused on enterprise
-              application development and systems integration.
+              application development and systems integration
             </p>
             <p className="text-tech-blue font-semibold text-sm">
-              We keep your systems running.
+              We keep your systems running
             </p>
           </div>
 
@@ -83,11 +83,11 @@ export default function Footer() {
             </h4>
             <ul className="space-y-3 text-sm text-slate-400">
               <li className="flex items-center gap-2">
-                <MapPin size={16} className="text-tech-blue flex-shrink-0" />
+                <MapPin size={16} className="text-tech-blue shrink-0" />
                 Midrand, Gauteng
               </li>
               <li className="flex items-center gap-2">
-                <Mail size={16} className="text-tech-blue flex-shrink-0" />
+                <Mail size={16} className="text-tech-blue shrink-0" />
                 <a
                   href="mailto:rakgoropothabang@gmail.com"
                   className="hover:text-tech-blue transition-colors"
@@ -96,7 +96,7 @@ export default function Footer() {
                 </a>
               </li>
               <li className="flex items-center gap-2">
-                <Phone size={16} className="text-tech-blue flex-shrink-0" />
+                <Phone size={16} className="text-tech-blue shrink-0" />
                 <a
                   href="tel:+27696350962"
                   className="hover:text-tech-blue transition-colors"

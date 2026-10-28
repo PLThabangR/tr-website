@@ -103,7 +103,7 @@ export default function Home() {
             <p className="text-lg md:text-xl text-text-secondary mb-8 leading-relaxed max-w-4xl">
               We help businesses troubleshoot, maintain and improve existing
               applications, integrations and business workflows so technical
-              problems don't keep getting in the way of daily operations.
+              problems don't keep getting in the way of daily operations
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
@@ -133,7 +133,7 @@ export default function Home() {
 
             <p className="text-slate-600 ">
               We step in when an existing system is causing friction, losing
-              data or has simply become too difficult to maintain.
+              data or has simply become too difficult to maintain
             </p>
           </div>
 
@@ -165,7 +165,7 @@ export default function Home() {
 
               <p className="text-text-muted leading-relaxed">
                 Practical focused engagements designed to resolve issues and
-                improve the systems you already depend on.
+                improve the systems you already depend on
               </p>
             </div>
 
@@ -213,7 +213,7 @@ export default function Home() {
 
             <p className="text-text-secondary">
               We don't guess. We investigate the current state, present our
-              findings and agree on the next steps before implementing changes.
+              findings and agree on the next steps before implementing changes
             </p>
           </div>
 
@@ -252,14 +252,14 @@ export default function Home() {
               </div>
 
               <h2 className="mb-4 text-black">
-                Start with a System Health Check.
+                Start with a System Health Check
               </h2>
 
               <p className="text-text-muted mb-6 leading-relaxed">
                 A structured assessment of an existing business system. We
                 investigate reliability, performance, maintainability and
                 integration risks and give you a clear prioritised roadmap for
-                what to do next.
+                what to do next
               </p>
 
               <ul className="space-y-3 mb-8">
@@ -343,7 +343,7 @@ export default function Home() {
 
           <p className="text-text-secondary mb-8">
             No sales pitch. Just a conversation about what is broken, what is
-            working, and how we can help.
+            working, and how we can help
           </p>
 
           <Link to="/contact" className="btn-primary">

@@ -72,7 +72,7 @@ export default function Services() {
             <h1 className="text-text-primary mb-6">What we do</h1>
             <p className="text-lg md:text-xl text-text-secondary leading-relaxed max-w-4xl">
               We focus on the practical, ongoing work required to keep business
-              systems stable, secure and useful.
+              systems stable, secure and useful
             </p>
           </div>
         </div>
@@ -125,7 +125,7 @@ export default function Services() {
           <h2 className="mb-4">Need help with something specific?</h2>
           <p className="text-text-secondary mb-8">
             If your system is causing problems and you're not sure which service
-            you need, start with a conversation.
+            you need, start with a conversation
           </p>
           <Link to="/contact" className="btn-primary">
             Start a Conversation

@@ -30,11 +30,11 @@ export default function Work() {
       client: "Professional services firm",
       status: "In Development",
       problem:
-        "Leave requests, document approvals, and timesheets were being managed through a mix of paper forms and email.",
+        "Leave requests, document approvals, and timesheets were being managed through a mix of paper forms and email",
       solution:
-        "We are building a role-based staff portal to digitise approvals and centralise internal documents.",
+        "We are building a role-based staff portal to digitise approvals and centralise internal documents",
       outcome:
-        "The system will provide an audit trail for all approvals and eliminate manual data re-entry.",
+        "The system will provide an audit trail for all approvals and eliminate manual data re-entry",
       tech: ["ASP.NET Core", "Angular", "SQL Server", "Azure"],
     },
     {
@@ -42,11 +42,11 @@ export default function Work() {
       client: "Property management",
       status: "Completed",
       problem:
-        "Managing property listings and agent relationships requires structured data, reliable API endpoints, and a maintainable backend architecture.",
+        "Managing property listings and agent relationships requires structured data, reliable API endpoints and a maintainable backend architecture",
       solution:
-        "We are building a property management REST API using ASP.NET Core 8, with dedicated application, domain, and infrastructure layers to manage property agents, property listings, and their relationships.",
+        "We are building a property management REST API using ASP.NET Core 8, with dedicated application, domain and infrastructure layers to manage property agents, property listings, and their relationships",
       outcome:
-        "The system aims to provide consistent API responses, validated requests, persistent data storage, and Redis caching through a modular backend designed for maintainability and future expansion.",
+        "The system aims to provide consistent API responses, validated requests, persistent data storage and Redis caching through a modular backend designed for maintainability and future expansion",
       tech: [
         "C#",
         "ASP.NET Core 8",
@@ -73,8 +73,8 @@ export default function Work() {
               Systems we have fixed and built
             </h1>
             <p className="text-lg md:text-xl text-text-secondary leading-relaxed max-w-2xl">
-              Every engagement starts with understanding what is already there.
-              We do not fabricate results.
+              Every engagement starts with understanding what is already there
+              We do not fabricate results
             </p>
           </div>
         </div>
@@ -154,7 +154,7 @@ export default function Work() {
           </h2>
           <p className="text-text-secondary mb-8">
             We can walk you through the architecture and decisions of a
-            completed project. No sales pitch just the technical story.
+            completed project. No sales pitch just the technical story
           </p>
           <Link to="/contact" className="btn-ghost">
             Request a Walkthrough
