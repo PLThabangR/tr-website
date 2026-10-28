@@ -4,13 +4,14 @@ import { ArrowRight } from "lucide-react";
 export default function About() {
   return (
     <>
-      <section className="bg-navy text-white border-b border-slate-800">
+      {/* Dark Header */}
+      <section className="bg-bg-main text-text-primary border-b border-border-subtle">
         <div className="container-custom py-20 md:py-24">
-          <div className="max-w-4xl">
-            <h1 className="text-white mb-6">
+          <div className="max-w-3xl">
+            <h1 className="text-text-primary mb-6">
               We look after the software your business already depends on.
             </h1>
-            <p className="text-lg md:text-xl text-slate-300 leading-relaxed">
+            <p className="text-lg md:text-xl text-text-secondary leading-relaxed">
               TR Software Development Consulting exists to solve a specific
               problem: most businesses have critical systems, but no one is
               actively maintaining them.
@@ -19,12 +20,13 @@ export default function About() {
         </div>
       </section>
 
-      <section className="section-padding">
+      {/* Light Content */}
+      <section className="section-padding light-section">
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             <div>
               <h2 className="mb-6">Why we exist</h2>
-              <div className="space-y-4 text-slate-600 leading-relaxed">
+              <div className="space-y-4 text-text-dark leading-relaxed">
                 <p>
                   Most South African businesses depend on software that was
                   implemented years ago. The original developer has moved on.
@@ -61,10 +63,10 @@ export default function About() {
                 ].map((value) => (
                   <div
                     key={value.title}
-                    className="border-l-2 border-tech-blue pl-4"
+                    className="border-l-2 border-gold pl-4"
                   >
-                    <h4 className="mb-1 text-navy">{value.title}</h4>
-                    <p className="text-slate-600 text-sm">{value.desc}</p>
+                    <h4 className="mb-1 text-black">{value.title}</h4>
+                    <p className="text-text-muted text-sm">{value.desc}</p>
                   </div>
                 ))}
               </div>
@@ -94,27 +96,27 @@ export default function About() {
                 ].map((member, index) => (
                   <div
                     key={member.role}
-                    className="bg-slate-50 p-5 border border-slate-200 rounded-md"
+                    className="bg-slate-50 p-5 border border-border-light rounded-md"
                   >
                     <div className="flex items-center gap-3 mb-2">
-                      <div className="w-6 h-6 rounded bg-navy text-white flex items-center justify-center font-mono text-xs">
+                      <div className="w-6 h-6 rounded bg-gold text-btn-text flex items-center justify-center font-sans text-xs font-bold">
                         {index + 1}
                       </div>
-                      <h4 className="text-navy">{member.role}</h4>
+                      <h4 className="text-black">{member.role}</h4>
                     </div>
-                    <p className="text-slate-600 text-sm">{member.focus}</p>
+                    <p className="text-text-muted text-sm">{member.focus}</p>
                   </div>
                 ))}
               </div>
 
-              <div className="mt-8 bg-light-blue p-6 rounded-md border border-tech-blue/20">
-                <h4 className="mb-2 text-navy">Part of the TR group</h4>
-                <p className="text-slate-700 text-sm leading-relaxed mb-4">
+              <div className="mt-8 bg-slate-50 p-6 rounded-md border border-border-light">
+                <h4 className="mb-2 text-black">Part of the TR group</h4>
+                <p className="text-text-muted text-sm leading-relaxed mb-4">
                   TR Application Development is a separate division of the same
                   legal entity, focused on enterprise application development,
-                  systems integration and cloud deployment.
+                  systems integration, and cloud deployment.
                 </p>
-                <p className="text-slate-700 text-sm leading-relaxed">
+                <p className="text-text-muted text-sm leading-relaxed">
                   Clients benefit from a single relationship that spans the full
                   lifecycle: build, deploy, support, and enhance.
                 </p>
@@ -124,10 +126,13 @@ export default function About() {
         </div>
       </section>
 
-      <section className="section-padding bg-slate-50 border-t border-slate-200">
+      {/* Dark CTA */}
+      <section className="section-padding bg-bg-main border-t border-border-subtle">
         <div className="container-custom max-w-2xl text-center">
-          <h2 className="mb-4">Let's talk about your systems.</h2>
-          <p className="text-slate-600 mb-8">
+          <h2 className="text-text-primary mb-4">
+            Let's talk about your systems.
+          </h2>
+          <p className="text-text-secondary mb-8">
             The first step is a conversation. No pitch. Just understanding what
             you have and what you need.
           </p>

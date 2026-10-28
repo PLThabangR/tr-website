@@ -31,14 +31,17 @@ export default function Work() {
 
   return (
     <>
-      <section className="bg-navy text-white border-b border-slate-800">
+      {/* Dark Header */}
+      <section className="bg-bg-main text-text-primary border-b border-border-subtle">
         <div className="container-custom py-20 md:py-24">
           <div className="max-w-3xl">
-            <div className="font-mono text-sm text-tech-blue mb-4 uppercase tracking-wider">
+            <div className="font-sans text-sm text-gold mb-4 uppercase tracking-wider">
               Work
             </div>
-            <h1 className="text-white mb-6">Systems we have fixed and built</h1>
-            <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl">
+            <h1 className="text-text-primary mb-6">
+              Systems we have fixed and built
+            </h1>
+            <p className="text-lg md:text-xl text-text-secondary leading-relaxed max-w-2xl">
               Every engagement starts with understanding what is already there.
               We do not fabricate results.
             </p>
@@ -46,20 +49,23 @@ export default function Work() {
         </div>
       </section>
 
-      <section className="section-padding">
+      {/* Light Content */}
+      <section className="section-padding light-section">
         <div className="container-custom max-w-4xl">
           <div className="space-y-12">
             {caseStudies.map((study) => (
               <div
                 key={study.title}
-                className="border border-slate-200 rounded-lg overflow-hidden"
+                className="border border-border-light rounded-lg overflow-hidden bg-white shadow-sm"
               >
-                <div className="bg-slate-50 px-6 py-4 border-b border-slate-200 flex flex-wrap justify-between items-center gap-4">
+                <div className="bg-slate-50 px-6 py-4 border-b border-border-light flex flex-wrap justify-between items-center gap-4">
                   <div>
                     <h3 className="text-xl mb-1">{study.title}</h3>
-                    <div className="text-sm text-slate-500">{study.client}</div>
+                    <div className="text-sm text-text-muted">
+                      {study.client}
+                    </div>
                   </div>
-                  <div className="font-mono text-xs px-3 py-1 bg-white border border-slate-200 rounded-full text-slate-600">
+                  <div className="font-sans text-xs px-3 py-1 bg-white border border-border-light rounded-full text-text-dark">
                     Status: {study.status}
                   </div>
                 </div>
@@ -67,36 +73,36 @@ export default function Work() {
                 <div className="p-6 md:p-8">
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
                     <div>
-                      <div className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">
+                      <div className="text-xs font-semibold text-text-muted uppercase tracking-wider mb-2">
                         The Problem
                       </div>
-                      <p className="text-sm text-slate-600 leading-relaxed">
+                      <p className="text-sm text-text-dark leading-relaxed">
                         {study.problem}
                       </p>
                     </div>
                     <div>
-                      <div className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">
+                      <div className="text-xs font-semibold text-text-muted uppercase tracking-wider mb-2">
                         Our Solution
                       </div>
-                      <p className="text-sm text-slate-600 leading-relaxed">
+                      <p className="text-sm text-text-dark leading-relaxed">
                         {study.solution}
                       </p>
                     </div>
                     <div>
-                      <div className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">
+                      <div className="text-xs font-semibold text-text-muted uppercase tracking-wider mb-2">
                         The Outcome
                       </div>
-                      <p className="text-sm text-slate-600 leading-relaxed">
+                      <p className="text-sm text-text-dark leading-relaxed">
                         {study.outcome}
                       </p>
                     </div>
                   </div>
 
-                  <div className="pt-6 border-t border-slate-100 flex flex-wrap gap-2">
+                  <div className="pt-6 border-t border-border-light flex flex-wrap gap-2">
                     {study.tech.map((t) => (
                       <span
                         key={t}
-                        className="font-mono text-xs text-slate-500 bg-slate-50 px-2 py-1 rounded"
+                        className="font-sans text-xs text-text-muted bg-slate-100 px-2 py-1 rounded border border-border-light"
                       >
                         {t}
                       </span>
@@ -109,12 +115,13 @@ export default function Work() {
         </div>
       </section>
 
-      <section className="section-padding bg-navy text-white border-t border-slate-800">
+      {/* Dark CTA */}
+      <section className="section-padding bg-bg-main border-t border-border-subtle">
         <div className="container-custom max-w-2xl text-center">
-          <h2 className="text-white mb-4">
+          <h2 className="text-text-primary mb-4">
             Want to see a detailed technical walkthrough?
           </h2>
-          <p className="text-slate-400 mb-8">
+          <p className="text-text-secondary mb-8">
             We can walk you through the architecture and decisions of a
             completed project. No sales pitch — just the technical story.
           </p>
