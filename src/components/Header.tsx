@@ -29,13 +29,7 @@ export default function Header() {
           <img
             src="/TRBannerBgClear.png"
             alt="TR Software Development Consulting"
-            className="h-10 w-auto md:hidden"
-          />
-
-          <img
-            src="/TRBannerBgClear.png"
-            alt="TR Software Development Consulting"
-            className="h-20 w-auto hidden md:block"
+            className="h-8 md:h-10 w-auto object-contain"
           />
         </Link>
 

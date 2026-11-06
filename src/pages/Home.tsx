@@ -93,7 +93,7 @@ export default function Home() {
         <div className="container-custom py-20 md:py-28">
           <div className="max-w-4xl">
             <div className="font-sans text-sm text-gold mb-4 uppercase tracking-wider">
-              TR Software Development
+              TR Managed Application Services
             </div>
 
             <h1 className="text-text-primary mb-6">

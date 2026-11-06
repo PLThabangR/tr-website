@@ -12,9 +12,9 @@ export default function About() {
               We look after the software your business already depends on.
             </h1>
             <p className="text-lg md:text-xl text-text-secondary leading-relaxed">
-              TR Software Development Consulting exists to solve a specific
-              problem: most businesses have critical systems, but no one is
-              actively maintaining them.
+              TR Managed Application Services is a division of TR Software
+              Systems Group. We exist to fill a gap most businesses have
+              critical systems but no one is maintaining them
             </p>
           </div>
         </div>
@@ -112,13 +112,15 @@ export default function About() {
               <div className="mt-8 bg-slate-50 p-6 rounded-md border border-border-light">
                 <h4 className="mb-2 text-black">Part of the TR group</h4>
                 <p className="text-text-muted text-sm leading-relaxed mb-4">
-                  TR Application Development is a separate division of the same
-                  legal entity, focused on enterprise application development,
-                  systems integration, and cloud deployment.
+                  <strong>Group structure:</strong> TR Software Systems Group
+                  (Pty) Ltd operates two complementary practices TR Managed
+                  Application Services (this brand) and TR Application
+                  Development (a division for new builds, integrations, and
+                  cloud deployment).
                 </p>
                 <p className="text-text-muted text-sm leading-relaxed">
                   Clients benefit from a single relationship that spans the full
-                  lifecycle: build, deploy, support, and enhance.
+                  lifecycle: build, deploy, support and enhance.
                 </p>
               </div>
             </div>
