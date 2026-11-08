@@ -9,10 +9,10 @@ export default function Header() {
   const navLinks = [
     { to: "/", label: "Home" },
     { to: "/services", label: "Services" },
-    { to: "/health-check", label: "Health Check" },
+    { to: "/health-check", label: "Health" },
     { to: "/work", label: "Work" },
     { to: "/about", label: "About" },
-    { to: "/contact", label: "Contact" },
+   
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -59,10 +59,10 @@ export default function Header() {
             AppDev
           </a>
           <a
-            href="https://tra-applicationdev.vercel.app/"
+            href="https://trs-saasapplication.vercel.app/"
             className="text-sm font-semibold text-text-secondary hover:text-gold transition-colors"
           >
-            Business
+            Software
           </a>
 
           <Link to="/contact" className="btn-primary py-2 px-4 text-sm ml-2">
@@ -110,6 +110,12 @@ export default function Header() {
               className="px-4 py-3 text-sm font-medium text-text-secondary hover:text-gold transition-colors"
             >
               AppDev
+            </a>
+            <a
+              href="https://trs-saasapplication.vercel.app/"
+              className="px-4 py-3 text-sm font-medium text-text-secondary hover:text-gold transition-colors"
+            >
+              Software
             </a>
 
             <Link
