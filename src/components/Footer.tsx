@@ -9,12 +9,17 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           <div className="md:col-span-2">
             <div className="flex items-center gap-3 mb-4">
-              <div className="font-semibold text-sm">
-                TR Managed Application Services
+              <div className="w-8 h-8 bg-gold flex items-center justify-center font-bold text-btn-text text-sm rounded-sm">
+                TR
               </div>
-            </div>
-            <div className="text-xs text-slate-400">
-              A Division of TR Software Systems Group (Pty) Ltd
+              <div>
+                <div className="font-sans font-semibold text-sm text-text-primary tracking-wide">
+                  TR APPLICATION MANAGED SERVICES
+                </div>
+                <div className="font-sans text-xs text-text-secondary">
+                  A Division of TR Software Systems Group (Pty) Ltd
+                </div>
+              </div>
             </div>
 
             <p className="text-tech-blue font-semibold text-sm">
@@ -103,8 +108,8 @@ export default function Footer() {
 
         <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-400">
           <p>
-            © {new Date().getFullYear()} TR Application Managed Services
-            (Pty) Ltd. All rights reserved rights reserved.
+            © {new Date().getFullYear()} TR Software Systems Group (Pty) Ltd. All
+            rights reserved rights reserved.
           </p>
           <p className="text-xs">African Business. Reliable Systems.</p>
         </div>

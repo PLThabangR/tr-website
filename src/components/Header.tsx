@@ -58,6 +58,12 @@ export default function Header() {
           >
             AppDev
           </a>
+          <a
+            href="https://tra-applicationdev.vercel.app/"
+            className="text-sm font-semibold text-text-secondary hover:text-gold transition-colors"
+          >
+            Business
+          </a>
 
           <Link to="/contact" className="btn-primary py-2 px-4 text-sm ml-2">
             Book a Health Check
