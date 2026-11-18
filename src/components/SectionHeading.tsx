@@ -1,4 +1,4 @@
-type Props = { index: string; eyebrow: string; title: string; copy?: string; };
+type Props = { index?: string; eyebrow: string; title: string; copy?: string };
 export function SectionHeading({ index, eyebrow, title, copy }: Props) {
   return <div className="mb-12 grid gap-5 md:grid-cols-[110px_1fr]">
     <span className="section-index pt-2">{index} / {eyebrow}</span>

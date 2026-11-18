@@ -8,7 +8,7 @@ export function Contact() {
  const submit = (event: FormEvent<HTMLFormElement>) => {
    event.preventDefault();
    const data = new FormData(event.currentTarget);
-   const subject = encodeURIComponent(`Website enquiry — ${data.get("name")}`);
+   const subject = encodeURIComponent(`Website enquiry ${data.get("name")}`);
    const body = encodeURIComponent(`Name: ${data.get("name")}\\nEmail: ${data.get("email")}\\nOrganisation: ${data.get("organisation")}\\nArea of interest: ${data.get("service")}\\n\\n${data.get("message")}`);
    window.location.href = `mailto:${company.email}?subject=${subject}&body=${body}`;
    setSent(true);

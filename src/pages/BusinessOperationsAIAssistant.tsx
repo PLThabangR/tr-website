@@ -200,8 +200,8 @@ export default function BusinessOperationsAIAssistant() {
         >
           <div>
             <div className="mb-7 inline-flex items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.2em] text-[#DEAB5F]">
-              <span className="h-2 w-2 rounded-full bg-[#DEAB5F]" />
-              TR AI ENGINEERING / BUSINESS AUTOMATION
+             
+              AI ENGINEERING / BUSINESS AUTOMATION
             </div>
             <h1 className="max-w-3xl font-serif text-4xl leading-[1.08] tracking-tight text-[#F7F4EF] sm:text-5xl lg:text-6xl">
               Give your business systems{" "}
@@ -592,7 +592,7 @@ export default function BusinessOperationsAIAssistant() {
                 existing environment and iterate against real-world feedback.
               </p>
               <p>
-                We focus on solving a defined business problem—not introducing
+                We focus on solving a defined business problem not introducing
                 AI for its own sake.
               </p>
             </div>
@@ -712,7 +712,7 @@ export default function BusinessOperationsAIAssistant() {
             <p>
               <strong className="text-[#F7F4EF]">Important:</strong> AI output
               is not a security boundary. Data access is enforced by application
-              services, database permissions and integration controls—not by
+              services, database permissions and integration controls not by
               model instructions alone.
             </p>
           </div>

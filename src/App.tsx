@@ -4,10 +4,11 @@ import { SiteLayout } from "./components/SiteLayout";
 import { Home } from "./pages/Home";
 import { About } from "./pages/About";
 import { Contact } from "./pages/Contact";
-import { ServicePage } from "./pages/ServicePage";
+
 import BusinessOperationsAIAssistant from "./pages/BusinessOperationsAIAssistant";
 import ManagedServices from "./pages/ManagedServices";
 import ApplicationDevelopment from "./pages/ApplicationDevelopment";
+import DataAnalytics from "./pages/DataAnalytics";
 
 export default function App() {
   return (
@@ -20,9 +21,8 @@ export default function App() {
 
         <Route path="managed-services" element={<ManagedServices />} />
         <Route path="application-development" element={<ApplicationDevelopment />} />
-        <Route path="data-analytics" element={<ServicePage />} />
-        <Route path="business-automation" element={<ServicePage />} />
-        <Route path="software-products" element={<ServicePage />} />
+      <Route path="/data-analytics" element={<DataAnalytics />} />
+     
 
         <Route
           path="business-operations-ai-assistant"

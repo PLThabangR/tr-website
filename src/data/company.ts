@@ -8,15 +8,7 @@ export const company = {
   promise: "WE BUILD. WE SUPPORT. WE IMPROVE.",
   divisions: [
  
-    {
-      number: "03",
-      name: "Data & Analytics",
-      short: "Turn disconnected business data into clear operational insight.",
-      description: "Database, reporting and business intelligence capabilities for organisations working across spreadsheets, applications and fragmented data sources.",
-      href: "/data-analytics",
-      status: "Developing capability",
-      items: ["Power BI reporting", "Database design and optimisation", "Data migration and integration", "Data cleansing and transformation", "Managed database services"],
-    },
+   
     {
       number: "04",
       name: "Business Automation",

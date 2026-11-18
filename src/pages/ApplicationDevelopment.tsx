@@ -233,7 +233,7 @@ export default function ApplicationDevelopment() {
 
             <div className="mt-4 flex items-center gap-2 text-[10px] leading-5 text-text-secondary">
               <Code2 size={14} className="shrink-0 text-gold" />
-              Example interface only — illustrative data, not a live product or
+              Example interface only illustrative data, not a live product or
               client deployment.
             </div>
           </div>
@@ -415,7 +415,7 @@ export default function ApplicationDevelopment() {
         <SectionTitle
           eyebrow="Technology & architecture"
           title="Built with maintainability in mind."
-          description="We select technologies based on the requirements, integration needs, team context and expected operating environment — not simply because a technology is fashionable."
+          description="We select technologies based on the requirements, integration needs, team context and expected operating environment not simply because a technology is fashionable."
         />
 
         <div className="grid gap-3 sm:grid-cols-2">

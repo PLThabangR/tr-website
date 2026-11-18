@@ -139,7 +139,7 @@ export function Home() {
         <div className="container-custom relative grid min-h-[690px] items-center py-20 lg:grid-cols-[1.2fr_.8fr]">
           <div className="max-w-3xl">
             <p className="eyebrow mb-8 flex items-center gap-3">
-              <span className="inline-block h-px w-8 bg-gold" />
+             
               AI Engineering · Software · Business Systems
             </p>
 
@@ -169,7 +169,7 @@ export function Home() {
             </div>
 
             <div className="mt-16 flex items-center gap-4 text-xs uppercase tracking-[.16em] text-text-secondary">
-              <span className="h-px w-10 bg-gold" />
+            
               {company.promise}
             </div>
           </div>
@@ -199,19 +199,12 @@ export function Home() {
             </div>
 
             <span className="absolute left-2 top-1/3 font-mono text-[10px] tracking-[.2em] text-text-secondary [writing-mode:vertical-rl]">
-              26°06' S — 28°03' E
+              26°06' S - 28°03' E
             </span>
           </div>
         </div>
 
-        <div className="container-custom absolute bottom-6 left-1/2 flex -translate-x-1/2 items-center justify-between text-[10px] uppercase tracking-[.2em] text-text-secondary">
-          <span>Johannesburg · Gauteng</span>
-
-          <span className="flex items-center gap-2">
-            Scroll to explore
-            <ArrowDownRight size={13} />
-          </span>
-        </div>
+       
       </section>
 
       {/* INTRODUCTION */}
