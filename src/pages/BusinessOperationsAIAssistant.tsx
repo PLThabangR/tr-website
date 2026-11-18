@@ -23,6 +23,7 @@ import {
   Workflow,
 } from "lucide-react";
 
+
 const capabilities = [
   {
     number: "01",
@@ -171,13 +172,31 @@ export default function BusinessOperationsAIAssistant() {
   return (
     <main className="overflow-hidden bg-[#100E0F] text-[#F7F4EF]">
       {/* Hero */}
-      <section className="relative isolate border-b border-[#383235]">
+
+      <section className="relative isolate overflow-hidden border-b border-[#383235]">
+        {/* Decorative CSS background */}
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_78%_25%,rgba(222,171,95,0.10),transparent_38%),linear-gradient(135deg,rgba(255,255,255,0.025),transparent_55%)]"
-        />
+          className="pointer-events-none absolute inset-0 z-0"
+        >
+          {/* Main gold glow */}
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_78%_25%,rgba(222,171,95,0.14),transparent_45%)]" />
+
+          {/* Secondary light */}
+          <div className="absolute -right-40 -top-40 h-[550px] w-[550px] rounded-full bg-[#DEAB5F]/[0.06] blur-[110px]" />
+
+          {/* Subtle lower-left glow */}
+          <div className="absolute -bottom-40 -left-40 h-[400px] w-[400px] rounded-full bg-[#DEAB5F]/[0.04] blur-[100px]" />
+
+          {/* Fine technical grid */}
+          <div className="absolute inset-0 opacity-[0.045] [background-image:linear-gradient(rgba(255,255,255,0.3)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.3)_1px,transparent_1px)] [background-size:48px_48px]" />
+
+          {/* Diagonal highlight */}
+          <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(255,255,255,0.025),transparent_55%)]" />
+        </div>
+
         <div
-          className={`${container} grid gap-14 py-20 sm:py-24 lg:grid-cols-[1fr_0.95fr] lg:items-center lg:gap-16 lg:py-28`}
+          className={`${container} relative z-10 grid gap-14 py-20 sm:py-24 lg:grid-cols-[1fr_0.95fr] lg:items-center lg:gap-16 lg:py-28`}
         >
           <div>
             <div className="mb-7 inline-flex items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.2em] text-[#DEAB5F]">

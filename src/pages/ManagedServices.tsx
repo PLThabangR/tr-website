@@ -13,6 +13,7 @@ import {
   ShieldCheck,
   Wrench,
 } from "lucide-react";
+import { HeroBackground } from "../components/ServiceHeroVisual";
 
 const services = [
   {
@@ -131,6 +132,7 @@ export default function ManagedServices() {
     <div className="min-h-screen bg-background text-text-primary">
       {/* HERO */}
       <section className="relative overflow-hidden border-b border-border-subtle">
+         <HeroBackground variant="managed" />
         <div className="container-custom grid gap-14 py-20 sm:py-28 lg:grid-cols-[1.05fr_.95fr] lg:items-center lg:py-32">
           <div>
             <Eyebrow>Managed Application Services</Eyebrow>

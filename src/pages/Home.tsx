@@ -1,13 +1,11 @@
 import {
   ArrowDownRight,
-  ArrowRight,
   ArrowUpRight,
   BarChart3,
   Bot,
   BrainCircuit,
   Code2,
   Database,
-  GitBranch,
   LifeBuoy,
   Network,
   Workflow,

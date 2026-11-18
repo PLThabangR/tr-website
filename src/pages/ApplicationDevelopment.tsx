@@ -13,6 +13,7 @@ import {
   Network,
   Workflow,
 } from "lucide-react";
+import { HeroBackground } from "../components/ServiceHeroVisual";
 
 const solutions = [
   {
@@ -134,6 +135,8 @@ export default function ApplicationDevelopment() {
     <div className="min-h-screen bg-background text-text-primary">
       {/* HERO */}
       <section className="relative overflow-hidden border-b border-border-subtle">
+        <HeroBackground variant="development" />
+
         <div className="container-custom grid gap-14 py-20 sm:py-28 lg:grid-cols-[1.05fr_.95fr] lg:items-center lg:py-32">
           <div>
             <Eyebrow>Custom Application Development</Eyebrow>
