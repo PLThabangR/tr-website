@@ -1,9 +1,7 @@
-
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap");
 @import "tailwindcss";
 
 @theme {
-  /* Brand colours */
   --color-bg-main: #100e0f;
   --color-gold: #deab5f;
   --color-gold-hover: #c99549;
@@ -11,90 +9,65 @@
   --color-text-primary: #f7f4ef;
   --color-text-secondary: #b9b2aa;
   --color-border-subtle: #383235;
-
-  /* Light section colours */
   --color-text-dark: #1e293b;
   --color-text-muted: #475569;
   --color-border-light: #e2e8f0;
-
-  /* Fonts */
   --font-sans: "Inter", system-ui, sans-serif;
   --font-serif: "Playfair Display", serif;
 }
 
 @layer base {
-  html {
-    scroll-behavior: smooth;
-  }
-
-  body {
-    @apply font-sans bg-bg-main text-text-primary antialiased;
-  }
-
-  h1 {
-    @apply text-4xl md:text-5xl font-serif font-bold tracking-tight leading-tight;
-  }
-
-  h2 {
-    @apply text-3xl font-serif font-bold tracking-tight;
-  }
-
-  h3 {
-    @apply text-2xl font-sans font-semibold;
-  }
-
-  h4 {
-    @apply text-lg font-sans font-semibold;
-  }
+  html { scroll-behavior: smooth; }
+  body { @apply font-sans bg-bg-main text-text-primary antialiased; }
+  h1 { @apply text-4xl md:text-5xl font-serif font-bold tracking-tight leading-tight; }
+  h2 { @apply text-3xl font-serif font-bold tracking-tight; }
+  h3 { @apply text-2xl font-sans font-semibold; }
+  h4 { @apply text-lg font-sans font-semibold; }
+  ::selection { background: #deab5f; color: #100e0f; }
+  a { @apply focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold; }
 }
 
 @layer components {
-  /* Buttons */
-  .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 bg-gold text-btn-text font-medium px-6 py-3 rounded-md hover:bg-gold-hover transition-colors focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2 focus:ring-offset-bg-main;
-  }
+  .btn-primary { @apply inline-flex items-center justify-center gap-2 bg-gold text-btn-text font-medium px-6 py-3 rounded-md hover:bg-gold-hover transition-colors focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2 focus:ring-offset-bg-main; }
+  .btn-secondary { @apply inline-flex items-center justify-center gap-2 bg-transparent text-gold font-medium px-6 py-3 rounded-md border border-gold hover:bg-gold/10 transition-colors focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2 focus:ring-offset-bg-main; }
+  .btn-ghost { @apply inline-flex items-center justify-center gap-2 text-text-secondary font-medium px-6 py-3 rounded-md border border-border-subtle hover:text-text-primary hover:border-text-primary transition-colors; }
+  .container-custom { @apply max-w-6xl mx-auto px-6; }
+  .section-padding { @apply py-16 md:py-24; }
+  .card { @apply bg-bg-main p-6 border border-border-subtle hover:border-gold/50 transition-colors rounded-md; }
+  .tech-tag { @apply inline-flex items-center px-2.5 py-1 rounded text-xs font-sans bg-bg-main text-text-secondary border border-border-subtle; }
+  .light-section { @apply bg-white text-text-dark; }
+  .light-section h1,.light-section h2,.light-section h3,.light-section h4 { @apply text-black; }
+  .light-section .btn-primary,.light-section .btn-secondary { @apply ring-offset-white; }
+}
 
-  .btn-secondary {
-    @apply inline-flex items-center justify-center gap-2 bg-transparent text-gold font-medium px-6 py-3 rounded-md border border-gold hover:bg-gold/10 transition-colors focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2 focus:ring-offset-bg-main;
-  }
+@layer utilities {
+  .eyebrow { @apply text-[0.68rem] uppercase tracking-[0.22em] font-semibold text-gold; }
+  .display-title { font-size: clamp(3rem, 7vw, 6.5rem); line-height: .99; letter-spacing: -.055em; }
+  .rule { height: 1px; background: var(--color-border-subtle); }
+  .section-index { @apply font-mono text-xs tracking-widest text-gold; }
+}
 
-  .btn-ghost {
-    @apply inline-flex items-center justify-center gap-2 text-text-secondary font-medium px-6 py-3 rounded-md border border-border-subtle hover:text-text-primary hover:border-text-primary transition-colors;
-  }
-
-  /* Layout */
-  .container-custom {
-    @apply max-w-5xl mx-auto px-6;
-  }
-
-  .section-padding {
-    @apply py-16 md:py-24;
-  }
-
-  /* Dark cards */
-  .card {
-    @apply bg-bg-main p-6 border border-border-subtle hover:border-gold/50 transition-colors rounded-md;
-  }
-
-  /* Technology tags */
-  .tech-tag {
-    @apply inline-flex items-center px-2.5 py-1 rounded text-xs font-sans bg-bg-main text-text-secondary border border-border-subtle;
-  }
-
-  /* Light sections */
-  .light-section {
-    @apply bg-white text-text-dark;
-  }
-
-  .light-section h1,
-  .light-section h2,
-  .light-section h3,
-  .light-section h4 {
-    @apply text-black;
-  }
-
-  .light-section .btn-primary,
-  .light-section .btn-secondary {
-    @apply ring-offset-white;
-  }
+/* Quiet editorial layout: deliberate spacing, thin rules and restrained colour. */
+:root { color-scheme: dark; font-synthesis: none; text-rendering: optimizeLegibility; }
+body { min-width: 320px; }
+.site-shell { overflow: clip; }
+.nav-link { @apply text-sm text-text-secondary transition-colors hover:text-text-primary; }
+.nav-link.active { @apply text-gold; }
+.menu-panel { background: #171416; border: 1px solid var(--color-border-subtle); }
+.hero-grid {
+  background-image: linear-gradient(to right, rgba(255,255,255,.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,.035) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: linear-gradient(to bottom, black, transparent 92%);
+}
+.hero-mark { color: rgba(222,171,95,.12); font-family: var(--font-serif); font-size: clamp(18rem, 40vw, 39rem); line-height: .7; }
+.service-row { border-top: 1px solid var(--color-border-subtle); }
+.service-row:last-child { border-bottom: 1px solid var(--color-border-subtle); }
+.service-row:hover .service-arrow { transform: translate(4px,-4px); color: var(--color-gold); }
+.service-arrow { transition: transform .2s ease, color .2s ease; }
+.page-intro { border-bottom: 1px solid var(--color-border-subtle); }
+input, textarea, select { color: var(--color-text-primary); }
+.form-field { @apply w-full bg-transparent border border-border-subtle rounded-md px-4 py-3 text-sm placeholder:text-text-secondary/60 focus:border-gold focus:outline-none; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; }
 }

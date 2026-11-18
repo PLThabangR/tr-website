@@ -1,246 +1,34 @@
+import { useState } from "react";
 import type { FormEvent } from "react";
-import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { ArrowUpRight, Mail, MapPin, Phone } from "lucide-react";
+import { company } from "../data/company";
 
-export default function Contact() {
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-
-    const form = event.currentTarget;
-    const formData = new FormData(form);
-
-    const name = formData.get("name")?.toString() ?? "";
-    const company = formData.get("company")?.toString() ?? "";
-    const email = formData.get("email")?.toString() ?? "";
-    const phone = formData.get("phone")?.toString() ?? "";
-    const system = formData.get("system")?.toString() ?? "";
-    const message = formData.get("message")?.toString() ?? "";
-
-    const subject = encodeURIComponent(`Website enquiry from ${name}`);
-
-    const body = encodeURIComponent(
-      `Name: ${name}
-Company: ${company}
-Email: ${email}
-Phone: ${phone}
-System / Service: ${system}
-
-Message:
-${message}`,
-    );
-
-    window.location.href = `mailto:rakgoropothabang@gmail.com?subject=${subject}&body=${body}`;
-  };
-
-  return (
-    <>
-      {/* Dark Header */}
-      <section className="bg-bg-main text-text-primary border-b border-border-subtle">
-        <div className="container-custom py-16">
-          <div className="max-w-3xl">
-            <h1 className="text-text-primary mb-4">Contact</h1>
-
-            <p className="text-lg text-text-secondary">
-              Tell us about the system that is causing problems. We will respond
-              within one business day.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Light Content */}
-      <section className="section-padding light-section">
-        <div className="container-custom">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-            {/* Contact Form */}
-            <div className="lg:col-span-7">
-              <h2 className="text-2xl mb-6">Send a message</h2>
-
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                  <div>
-                    <label
-                      htmlFor="name"
-                      className="block text-sm font-medium text-black mb-2"
-                    >
-                      Your name *
-                    </label>
-
-                    <input
-                      id="name"
-                      type="text"
-                      name="name"
-                      required
-                      className="w-full px-4 py-3 rounded-md border border-border-light focus:border-gold focus:ring-1 focus:ring-gold outline-none transition-all"
-                    />
-                  </div>
-
-                  <div>
-                    <label
-                      htmlFor="company"
-                      className="block text-sm font-medium text-black mb-2"
-                    >
-                      Company
-                    </label>
-
-                    <input
-                      id="company"
-                      type="text"
-                      name="company"
-                      className="w-full px-4 py-3 rounded-md border border-border-light focus:border-gold focus:ring-1 focus:ring-gold outline-none transition-all"
-                    />
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                  <div>
-                    <label
-                      htmlFor="email"
-                      className="block text-sm font-medium text-black mb-2"
-                    >
-                      Email *
-                    </label>
-
-                    <input
-                      id="email"
-                      type="email"
-                      name="email"
-                      required
-                      className="w-full px-4 py-3 rounded-md border border-border-light focus:border-gold focus:ring-1 focus:ring-gold outline-none transition-all"
-                    />
-                  </div>
-
-                  <div>
-                    <label
-                      htmlFor="phone"
-                      className="block text-sm font-medium text-black mb-2"
-                    >
-                      Phone
-                    </label>
-
-                    <input
-                      id="phone"
-                      type="tel"
-                      name="phone"
-                      className="w-full px-4 py-3 rounded-md border border-border-light focus:border-gold focus:ring-1 focus:ring-gold outline-none transition-all"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="system"
-                    className="block text-sm font-medium text-black mb-2"
-                  >
-                    What system or service do you need help with? *
-                  </label>
-
-                  <select
-                    id="system"
-                    name="system"
-                    required
-                    className="w-full px-4 py-3 rounded-md border border-border-light focus:border-gold focus:ring-1 focus:ring-gold outline-none transition-all bg-white"
-                  >
-                    <option value="">Select an option</option>
-                    <option value="Data & Analytics">Data & Analytics</option>
-                    <option value="Managed Application Services">
-                      Managed Application Services
-                    </option>
-                    <option value="Application Development">
-                      Application Development
-                    </option>
-                    <option value="Business Automation">
-                      Business Automation
-                    </option>
-                    <option value="Software Products">Software Products</option>
-                    <option value="Other">Other</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="message"
-                    className="block text-sm font-medium text-black mb-2"
-                  >
-                    Describe your requirements *
-                  </label>
-
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={5}
-                    required
-                    placeholder="Tell us about your business, the systems you use and the problem you want to solve."
-                    className="w-full px-4 py-3 rounded-md border border-border-light focus:border-gold focus:ring-1 focus:ring-gold outline-none transition-all resize-none"
-                  />
-                </div>
-
-                <button type="submit" className="btn-primary w-full sm:w-auto">
-                  Prepare email
-                  <Send size={18} />
-                </button>
-
-                <p className="text-xs text-text-muted">
-                  Your email application will open with your enquiry prepared.
-                  You can review it before sending.
-                </p>
-              </form>
-            </div>
-
-            {/* Direct Contact */}
-            <div className="lg:col-span-5">
-              <div className="bg-slate-50 p-8 rounded-lg border border-border-light sticky top-24">
-                <h3 className="text-xl mb-6 text-black">Direct contact</h3>
-
-                <ul className="space-y-6">
-                  <li className="flex items-start gap-3">
-                    <Mail className="text-gold shrink-0 mt-1" size={20} />
-
-                    <div>
-                      <div className="font-medium text-black">Email</div>
-
-                      <a
-                        href="mailto:rakgoropothabang@gmail.com"
-                        className="text-text-muted hover:text-gold transition-colors text-sm"
-                      >
-                        rakgoropothabang@gmail.com
-                      </a>
-                    </div>
-                  </li>
-
-                  <li className="flex items-start gap-3">
-                    <Phone className="text-gold shrink-0 mt-1" size={20} />
-
-                    <div>
-                      <div className="font-medium text-black">Phone</div>
-
-                      <a
-                        href="tel:+27696350962"
-                        className="text-text-muted hover:text-gold transition-colors text-sm"
-                      >
-                        (+27) 69 635 0962
-                      </a>
-                    </div>
-                  </li>
-
-                  <li className="flex items-start gap-3">
-                    <MapPin className="text-gold shrink-0 mt-1" size={20} />
-
-                    <div>
-                      <div className="font-medium text-black">Location</div>
-
-                      <div className="text-text-muted text-sm">
-                        Midrand, Gauteng
-                        <br />
-                        South Africa
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </>
-  );
+export function Contact() {
+ const [sent,setSent] = useState(false);
+ const submit = (event: FormEvent<HTMLFormElement>) => {
+   event.preventDefault();
+   const data = new FormData(event.currentTarget);
+   const subject = encodeURIComponent(`Website enquiry — ${data.get("name")}`);
+   const body = encodeURIComponent(`Name: ${data.get("name")}\\nEmail: ${data.get("email")}\\nOrganisation: ${data.get("organisation")}\\nArea of interest: ${data.get("service")}\\n\\n${data.get("message")}`);
+   window.location.href = `mailto:${company.email}?subject=${subject}&body=${body}`;
+   setSent(true);
+ };
+ return <section className="section-padding"><div className="container-custom grid gap-14 lg:grid-cols-[.8fr_1.2fr]">
+  <div><p className="eyebrow mb-7">Contact TR Group</p><h1 className="text-5xl md:text-6xl">Let’s talk about what needs to work <em className="font-normal text-gold">better.</em></h1><p className="mt-8 max-w-md leading-7 text-text-secondary">Share a little about your business, your systems or the challenge you are trying to solve. We’ll take it from there.</p>
+   <div className="mt-12 grid gap-6 text-sm"><a className="flex items-center gap-4 text-text-secondary hover:text-gold" href={`mailto:${company.email}`}><Mail className="text-gold" size={18}/>{company.email}</a><a className="flex items-center gap-4 text-text-secondary hover:text-gold" href="tel:+27707620683"><Phone className="text-gold" size={18}/>{company.phone}</a><span className="flex items-center gap-4 text-text-secondary"><MapPin className="text-gold" size={18}/>{company.location}</span></div>
+  </div>
+  <form onSubmit={submit} className="border border-border-subtle p-6 md:p-9">
+   <p className="mb-8 text-xs uppercase tracking-[.18em] text-gold">Project enquiry</p>
+   <div className="grid gap-5 sm:grid-cols-2">
+    <label className="grid gap-2 text-xs text-text-secondary">Your name<input required name="name" className="form-field" placeholder="Name and surname"/></label>
+    <label className="grid gap-2 text-xs text-text-secondary">Email address<input required type="email" name="email" className="form-field" placeholder="you@company.co.za"/></label>
+    <label className="grid gap-2 text-xs text-text-secondary sm:col-span-2">Organisation<input name="organisation" className="form-field" placeholder="Company name (optional)"/></label>
+    <label className="grid gap-2 text-xs text-text-secondary sm:col-span-2">What can we help with?<select name="service" className="form-field"><option>Managed application services</option><option>Application development</option><option>Data & analytics</option><option>Business automation</option><option>Software products</option><option>Not sure yet</option></select></label>
+    <label className="grid gap-2 text-xs text-text-secondary sm:col-span-2">Tell us about your requirements<textarea required name="message" rows={5} className="form-field resize-y" placeholder="A short description of the challenge or opportunity..."/></label>
+   </div>
+   <button className="btn-primary mt-7 w-full sm:w-auto" type="submit">Prepare email <ArrowUpRight size={16}/></button>
+   {sent && <p role="status" className="mt-4 text-xs leading-5 text-text-secondary">Your email application should open with the enquiry details. If it doesn’t, email us directly at {company.email}.</p>}
+   <p className="mt-5 text-[11px] leading-5 text-text-secondary">This form prepares an email on your device. It does not submit information to a server.</p>
+  </form>
+ </div></section>;
 }

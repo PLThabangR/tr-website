@@ -7,24 +7,7 @@ export const company = {
   phone: "+27 70 762 0683",
   promise: "WE BUILD. WE SUPPORT. WE IMPROVE.",
   divisions: [
-    {
-      number: "01",
-      name: "Managed Application Services",
-      short: "Keep essential business applications stable, secure and supported.",
-      description: "Practical, ongoing care for the business applications your organisation already relies on — including systems built by other providers.",
-      href: "/managed-services",
-      status: "Available service",
-      items: ["Application health checks", "Incident investigation & bug fixes", "Maintenance and security updates", "Performance improvements", "Support retainers and agreed SLAs"],
-    },
-    {
-      number: "02",
-      name: "Application Development",
-      short: "Build business software around the way your organisation works.",
-      description: "Custom web applications, APIs and integrations engineered to solve specific operational problems and connect the systems around them.",
-      href: "/application-development",
-      status: "Available service",
-      items: ["Custom business applications", "API design and development", "Systems integration", "Application modernisation", "Cloud deployment and delivery automation"],
-    },
+ 
     {
       number: "03",
       name: "Data & Analytics",

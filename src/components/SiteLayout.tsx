@@ -17,7 +17,7 @@ export function SiteLayout() {
   return (
     <div className="site-shell">
       <header className="relative z-30 border-b border-border-subtle">
-        <div className="container-custom flex h-[82px] items-center justify-between">
+        <div className="container-custom flex h-\[82px]\ items-center justify-between">
           <Link
             to="/"
             className="flex items-center gap-3"

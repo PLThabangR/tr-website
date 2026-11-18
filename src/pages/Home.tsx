@@ -1,154 +1,240 @@
-import { Link } from "react-router-dom";
 import {
+  ArrowDownRight,
   ArrowRight,
-  CheckCircle2,
-  Server,
-  AlertTriangle,
-  Wrench,
-  Plug,
-  FileSearch,
+  ArrowUpRight,
+  BarChart3,
+  Bot,
+  BrainCircuit,
+  Code2,
+  Database,
+  GitBranch,
+  LifeBuoy,
+  Network,
+  Workflow,
 } from "lucide-react";
+import { Link } from "react-router-dom";
+import { company } from "../data/company";
+import { SectionHeading } from "../components/SectionHeading";
 
-export default function Home() {
-  const problems = [
-    {
-      icon: AlertTriangle,
-      title: "Unreliable applications",
-      desc: "Software that crashes, loads slowly or behaves inconsistently, disrupting daily operations.",
-    },
-    {
-      icon: Plug,
-      title: "Failing integrations",
-      desc: "APIs that drop connections or exchange incomplete data between your CRM, ERP, and accounting systems.",
-    },
-    {
-      icon: Wrench,
-      title: "Hard-to-maintain systems",
-      desc: "Legacy applications built years ago by developers who have since moved on.",
-    },
-    {
-      icon: Server,
-      title: "Manual workflows",
-      desc: "Business processes that still rely on spreadsheets, email approvals, and manual data re-entry.",
-    },
-  ];
+const services = [
+  {
+    number: "01",
+    name: "AI Engineering & Business Automation",
+    status: "Developing capability",
+    description:
+      "We explore and engineer intelligent business solutions that connect company information, assist teams and automate selected operational workflows.",
+    capabilities: [
+      "AI business assistants",
+      "Agentic workflow automation",
+      "Document intelligence and RAG",
+      "Business system integration",
+    ],
+    href: "/business-operations-ai-assistant",
+    icon: BrainCircuit,
+    featured: true,
+  },
+  {
+    number: "02",
+    name: "Data & Analytics",
+    status: "Developing capability",
+    description:
+      "Transform business information into structured, accessible and meaningful insights that support operational visibility and better decision-making.",
+    capabilities: [
+      "Database design and management",
+      "Data analysis and reporting",
+      "Business intelligence",
+      "Data integration",
+    ],
+    href: "/data-analytics",
+    icon: BarChart3,
+    featured: false,
+  },
+  {
+    number: "03",
+    name: "Custom Application Development",
+    status: "Available service",
+    description:
+      "Design and develop software around your business processes, from internal business systems and customer portals to APIs and application integrations.",
+    capabilities: [
+      "Business applications",
+      "Workflow systems",
+      "API development",
+      "System integration",
+    ],
+    href: "/application-development",
+    icon: Code2,
+    featured: false,
+  },
+  {
+    number: "04",
+    name: "Managed Application Services",
+    status: "Available service",
+    description:
+      "Keep your existing business applications reliable, supported and performing through ongoing maintenance, technical support and continuous improvement.",
+    capabilities: [
+      "Application support",
+      "Maintenance and monitoring",
+      "Database management",
+      "Performance improvement",
+    ],
+    href: "/managed-services",
+    icon: LifeBuoy,
+    featured: false,
+  },
+];
 
-  const services = [
-    {
-      title: "Application Managed Services",
-      desc: "Ongoing maintenance, bug fixes, enhancements, and support for your existing systems.",
-      link: "/services",
-    },
-    {
-      title: "System Health Check",
-      desc: "A structured technical assessment of your application's current state, risks, and roadmap.",
-      link: "/health-check",
-    },
-    {
-      title: "Integration & API Support",
-      desc: "Connecting systems so data flows reliably, and fixing integrations that have stopped working.",
-      link: "/services",
-    },
-    {
-      title: "Application Improvements",
-      desc: "Building the specific features, reports and dashboards your business actually needs.",
-      link: "/services",
-    },
-  ];
+const principles = [
+  {
+    number: "01",
+    title: "Understand the business",
+    description:
+      "We begin with business processes, operational challenges and desired outcomes before recommending a technical solution.",
+  },
+  {
+    number: "02",
+    title: "Engineer intelligently",
+    description:
+      "We combine software engineering, data and AI technologies to create solutions grounded in real business requirements.",
+  },
+  {
+    number: "03",
+    title: "Connect systems and information",
+    description:
+      "We consider how applications, databases, documents, people and processes work together across your organisation.",
+  },
+  {
+    number: "04",
+    title: "Build for continuous improvement",
+    description:
+      "We favour maintainable systems and measurable improvements over unnecessary complexity and technology for its own sake.",
+  },
+];
 
-  const process = [
-    {
-      step: "1",
-      title: "Understand",
-      desc: "A conversation to understand the system, the constraints, and the specific problems.",
-    },
-    {
-      step: "2",
-      title: "Assess",
-      desc: "A structured review of the code, database, integrations, and infrastructure.",
-    },
-    {
-      step: "3",
-      title: "Present",
-      desc: "A written report detailing the risks, quick wins, and recommended roadmap.",
-    },
-    {
-      step: "4",
-      title: "Implement",
-      desc: "Agreed improvements, ongoing support, or both.",
-    },
-  ];
+const capabilities = [
+  {
+    icon: Bot,
+    title: "AI-powered business assistants",
+    description:
+      "Make business information easier to access through intelligent assistants grounded in company data and documents.",
+  },
+  {
+    icon: Workflow,
+    title: "Intelligent workflow automation",
+    description:
+      "Identify repeatable processes where automation can reduce manual work and improve consistency.",
+  },
+  {
+    icon: Network,
+    title: "Connected business systems",
+    description:
+      "Integrate applications, APIs and data sources to create more connected operational environments.",
+  },
+];
 
-  const healthCheckBenefits = [
-    "Written assessment of the application's current condition",
-    "Prioritised risk register with business impact explained",
-    "Practical improvement roadmap",
-    "Clear next steps for maintenance or replacement",
-  ];
-
+export function Home() {
   return (
     <>
-      {/* Section 1: Hero */}
-      <section className="bg-bg-main text-text-primary border-b border-border-subtle">
-        <div className="container-custom py-20 md:py-28">
-          <div className="max-w-4xl">
-            <div className="font-sans text-sm text-gold mb-4 uppercase tracking-wider">
-              TR Managed Application Services
-            </div>
+      {/* HERO */}
+      <section className="relative isolate min-h-[690px] overflow-hidden border-b border-border-subtle">
+        <div className="hero-grid absolute inset-0 -z-10" />
 
-            <h1 className="text-text-primary mb-6">
-              We keep your business systems running.
+        <div className="container-custom relative grid min-h-[690px] items-center py-20 lg:grid-cols-[1.2fr_.8fr]">
+          <div className="max-w-3xl">
+            <p className="eyebrow mb-8 flex items-center gap-3">
+              <span className="inline-block h-px w-8 bg-gold" />
+              AI Engineering · Software · Business Systems
+            </p>
+
+            <h1 className="display-title max-w-4xl">
+              Engineering intelligent systems for{" "}
+              <em className="font-normal text-gold">better business.</em>
             </h1>
 
-            <p className="text-lg md:text-xl text-text-secondary mb-8 leading-relaxed max-w-4xl">
-              We help businesses troubleshoot, maintain and improve existing
-              applications, integrations and business workflows so technical
-              problems don't keep getting in the way of daily operations
+            <p className="mt-9 max-w-xl text-base leading-8 text-text-secondary md:text-lg">
+              We bring together AI engineering, software development and
+              business automation to help organisations connect information,
+              improve operations and build smarter ways of working
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link to="/contact" className="btn-primary">
-                Book a System Health Check
-                <ArrowRight size={18} />
+            <div className="mt-10 flex flex-wrap gap-3">
+              <Link
+                to="/business-operations-ai-assistant"
+                className="btn-primary"
+              >
+                Explore AI solutions
+                <ArrowUpRight size={16} />
               </Link>
 
-              <Link to="/services" className="btn-ghost">
-                View our services
+              <Link to="/contact" className="btn-ghost">
+                Discuss a business challenge
               </Link>
             </div>
 
-            <div className="mt-8 text-sm font-sans text-text-secondary">
-              Application support · Integrations · Performance · Technical
-              improvements
+            <div className="mt-16 flex items-center gap-4 text-xs uppercase tracking-[.16em] text-text-secondary">
+              <span className="h-px w-10 bg-gold" />
+              {company.promise}
             </div>
           </div>
+
+          {/* HERO VISUAL */}
+          <div className="relative hidden h-full min-h-[480px] items-center justify-center lg:flex">
+            <div className="absolute right-0 top-1/2 h-[390px] w-[390px] -translate-y-1/2 rounded-full border border-border-subtle" />
+
+            <div className="absolute right-8 top-1/2 h-[310px] w-[310px] -translate-y-1/2 rounded-full border border-gold/30" />
+
+            <div className="absolute right-[82px] top-1/2 h-[202px] w-[202px] -translate-y-1/2 rounded-full border border-border-subtle" />
+
+            <span className="hero-mark absolute right-0 top-1/2 -translate-y-[47%]">
+              TR
+            </span>
+
+            <div className="absolute bottom-20 right-0 border-l border-gold pl-5">
+              <p className="eyebrow">Our focus</p>
+
+              <p className="mt-2 font-serif text-2xl">
+                Intelligence meets engineering.
+              </p>
+
+              <p className="mt-1 text-xs text-text-secondary">
+                AI · Data · Software · Automation
+              </p>
+            </div>
+
+            <span className="absolute left-2 top-1/3 font-mono text-[10px] tracking-[.2em] text-text-secondary [writing-mode:vertical-rl]">
+              26°06' S — 28°03' E
+            </span>
+          </div>
+        </div>
+
+        <div className="container-custom absolute bottom-6 left-1/2 flex -translate-x-1/2 items-center justify-between text-[10px] uppercase tracking-[.2em] text-text-secondary">
+          <span>Johannesburg · Gauteng</span>
+
+          <span className="flex items-center gap-2">
+            Scroll to explore
+            <ArrowDownRight size={13} />
+          </span>
         </div>
       </section>
 
-      {/* Section 2: Problems We Solve */}
-      <section className="section-padding bg-slate-50  border-b border-slate-200">
+      {/* INTRODUCTION */}
+      <section className="section-padding">
         <div className="container-custom">
-          <div className="max-w-2xl mb-12">
-            <h2 className="mb-4 text-black">What we fix</h2>
+          <SectionHeading
+            index="01"
+            eyebrow="What we do"
+            title="Business automation starts with understanding the business."
+            copy="AI alone does not solve operational problems. Businesses need connected information, reliable applications, well-designed workflows and the right engineering. We bring these disciplines together to develop practical intelligent business solutions."
+          />
 
-            <p className="text-slate-600 ">
-              We step in when an existing system is causing friction, losing
-              data or has simply become too difficult to maintain
-            </p>
-          </div>
+          <div className="mt-14 grid gap-5 md:grid-cols-3">
+            {capabilities.map(({ icon: Icon, title, description }) => (
+              <div key={title} className="border-t border-gold/60 pt-6">
+                <Icon size={22} className="text-gold" />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {problems.map((item) => (
-              <div
-                key={item.title}
-                className="bg-bg-main p-6 border border-border-subtle rounded-md"
-              >
-                <div className="text-gold mb-4">
-                  <item.icon size={24} />
-                </div>
-                <h4 className="mb-2 text-text-primary">{item.title}</h4>
-                <p className="text-text-secondary text-sm leading-relaxed">
-                  {item.desc}
+                <h3 className="mt-6 font-serif text-2xl">{title}</h3>
+
+                <p className="mt-4 text-sm leading-7 text-text-secondary">
+                  {description}
                 </p>
               </div>
             ))}
@@ -156,200 +242,260 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Section 3: Services */}
-      <section className="section-padding bg-white text-black border-b border-border-light">
-        <div className="container-custom">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
-            <div className="max-w-2xl">
-              <h2 className="mb-4 text-black">How we help</h2>
+      {/* FLAGSHIP AI OFFERING */}
+      <section className="border-y border-border-subtle bg-[#171416] py-20 md:py-28">
+        <div className="container-custom grid gap-12 lg:grid-cols-[1fr_1fr] lg:items-center">
+          <div>
+            <p className="eyebrow mb-5">
+              01 / AI Engineering & Business Automation
+            </p>
 
-              <p className="text-text-muted leading-relaxed">
-                Practical focused engagements designed to resolve issues and
-                improve the systems you already depend on
-              </p>
-            </div>
+            <h2 className="font-serif text-4xl font-normal leading-tight md:text-5xl">
+              Move beyond isolated tools. Build{" "}
+              <span className="text-gold">intelligent business systems.</span>
+            </h2>
+
+            <p className="mt-6 max-w-xl text-sm leading-7 text-text-secondary md:text-base">
+              We are developing the capability to help businesses make better
+              use of AI through business assistants, document intelligence,
+              connected applications and workflow automation.
+            </p>
 
             <Link
-              to="/services"
-              className="text-gold font-medium flex items-center gap-2 hover:text-gold-hover transition-colors"
+              to="/business-operations-ai-assistant"
+              className="btn-primary mt-8"
             >
-              View all services <ArrowRight size={16} />
+              Explore our AI approach
+              <ArrowUpRight size={16} />
             </Link>
-          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12">
-            {services.map((service, index) => (
-              <div
-                key={service.title}
-                className="border-t border-border-light pt-6"
-              >
-                <div className="text-sm font-sans text-gold mb-2">
-                  0{index + 1}
-                </div>
-
-                <h3 className="mb-3 text-black">{service.title}</h3>
-
-                <p className="text-text-muted mb-4 leading-relaxed">
-                  {service.desc}
-                </p>
-
-                <Link
-                  to={service.link}
-                  className="text-sm font-medium text-gold hover:text-gold-hover transition-colors"
-                >
-                  Learn more →
-                </Link>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Section 4: Process */}
-      <section className="section-padding bg-bg-main border-t border-b border-border-subtle">
-        <div className="container-custom">
-          <div className="max-w-2xl mb-12">
-            <h2 className="text-text-primary mb-4">How an engagement works</h2>
-
-            <p className="text-text-secondary">
-              We don't guess. We investigate the current state, present our
-              findings and agree on the next steps before implementing changes
+            <p className="mt-5 text-xs leading-6 text-text-secondary">
+              AI engineering and business automation are developing
+              capabilities. Solutions are scoped according to business
+              requirements, technical readiness and data availability.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {process.map((item, index) => (
-              <div key={item.step} className="relative">
-                <div className="text-3xl font-bold font-sans text-gold mb-3">
-                  {item.step}
-                </div>
-
-                <h4 className="text-text-primary mb-2">{item.title}</h4>
-
-                <p className="text-sm text-text-secondary leading-relaxed">
-                  {item.desc}
+          {/* AI ARCHITECTURE VISUAL */}
+          <div className="border border-border-subtle p-6 sm:p-8">
+            <div className="flex items-center justify-between border-b border-border-subtle pb-5">
+              <div>
+                <p className="text-[10px] uppercase tracking-[.2em] text-text-secondary">
+                  Conceptual solution architecture
                 </p>
+                <h3 className="mt-2 font-serif text-2xl">
+                  Business intelligence layer
+                </h3>
+              </div>
 
-                {index < 3 && (
-                  <div className="hidden md:block absolute top-4 -right-4 text-border-subtle">
-                    <ArrowRight size={16} />
+              <BrainCircuit size={25} className="text-gold" />
+            </div>
+
+            <div className="mt-6 grid gap-3">
+              {[
+                {
+                  icon: Database,
+                  title: "Business information",
+                  detail: "Databases · Documents · Applications",
+                },
+                {
+                  icon: BrainCircuit,
+                  title: "AI intelligence",
+                  detail: "LLMs · RAG · Context · Reasoning",
+                },
+                {
+                  icon: Workflow,
+                  title: "Business automation",
+                  detail: "Agents · Workflows · Human approval",
+                },
+              ].map(({ icon: Icon, title, detail }, index) => (
+                <div key={title}>
+                  <div className="flex items-center gap-4 border border-border-subtle p-4">
+                    <div className="grid size-10 shrink-0 place-items-center border border-gold/40 text-gold">
+                      <Icon size={19} />
+                    </div>
+
+                    <div>
+                      <h4 className="text-sm font-medium">{title}</h4>
+                      <p className="mt-1 text-xs text-text-secondary">
+                        {detail}
+                      </p>
+                    </div>
                   </div>
-                )}
+
+                  {index !== 2 && (
+                    <div className="flex justify-center py-2">
+                      <ArrowDownRight size={17} className="text-gold" />
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+
+            <p className="mt-5 text-[10px] leading-5 text-text-secondary">
+              Illustrative architecture. Actual components depend on the
+              requirements and design of each solution.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* SERVICES */}
+      <section className="section-padding">
+        <div className="container-custom">
+          <SectionHeading
+            index="02"
+            eyebrow="Our capabilities"
+            title="The engineering behind intelligent business."
+            copy="AI is one part of a wider technology ecosystem. We bring together data, applications, integration and ongoing technical support to help businesses build and maintain their digital operations."
+          />
+
+          <div className="mt-12">
+            {services.map((item) => {
+              const Icon = item.icon;
+
+              return (
+                <Link
+                  to={item.href}
+                  key={item.number}
+                  className={`service-row group grid gap-5 py-8 md:grid-cols-[70px_1fr_1.1fr_40px] md:items-start ${
+                    item.featured ? "border-l-2 border-l-gold pl-5 md:pl-7" : ""
+                  }`}
+                >
+                  <span className="section-index">{item.number}</span>
+
+                  <div>
+                    <div className="flex items-center gap-3">
+                      <Icon size={19} className="shrink-0 text-gold" />
+                    </div>
+
+                    <h3 className="mt-3 font-serif text-2xl font-normal md:text-3xl">
+                      {item.name}
+                    </h3>
+
+                    <span className="mt-3 inline-block text-[10px] uppercase tracking-widest text-gold">
+                      {item.status}
+                    </span>
+                  </div>
+
+                  <div>
+                    <p className="max-w-lg text-sm leading-7 text-text-secondary">
+                      {item.description}
+                    </p>
+
+                    <div className="mt-4 flex flex-wrap gap-x-4 gap-y-2">
+                      {item.capabilities.map((capability) => (
+                        <span
+                          key={capability}
+                          className="text-[10px] text-text-secondary"
+                        >
+                          · {capability}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  <ArrowUpRight className="service-arrow text-text-secondary" />
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* OUR APPROACH */}
+      <section className="border-y border-border-subtle bg-[#171416] py-16 md:py-24">
+        <div className="container-custom grid gap-10 md:grid-cols-[.8fr_1.2fr] md:items-center">
+          <div>
+            <p className="eyebrow mb-5">A practical engineering partner</p>
+
+            <h2 className="font-serif text-4xl font-normal leading-tight md:text-5xl">
+              No unnecessary complexity. No technology for technology's sake.
+            </h2>
+          </div>
+
+          <div className="grid gap-6 sm:grid-cols-2">
+            {principles.map((item) => (
+              <div
+                key={item.number}
+                className="border-t border-border-subtle pt-4"
+              >
+                <span className="section-index">{item.number}</span>
+
+                <h4 className="mt-3">{item.title}</h4>
+
+                <p className="mt-2 text-sm leading-6 text-text-secondary">
+                  {item.description}
+                </p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Section 5: Signature Service */}
-      <section className="section-padding bg-white text-black border-b border-border-light">
-        <div className="container-custom">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold/10 text-gold text-sm font-semibold mb-6 border border-gold/20">
-                <FileSearch size={16} />
-                Signature Engagement
+      {/* TECHNOLOGY FOUNDATION */}
+      <section className="section-padding">
+        <div className="container-custom grid gap-12 md:grid-cols-[.9fr_1.1fr] md:items-center">
+          <div>
+            <p className="eyebrow mb-5">Our engineering foundation</p>
+
+            <h2 className="font-serif text-4xl font-normal leading-tight md:text-5xl">
+              Built on software, data and intelligent technologies.
+            </h2>
+
+            <p className="mt-6 max-w-lg text-sm leading-7 text-text-secondary">
+              We use modern engineering tools and platforms to design
+              maintainable applications, connect business information and
+              explore practical AI-powered solutions.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 gap-3">
+            {[
+              ["AI Engineering", "LLMs · RAG · Agents"],
+              ["Backend", "C# · .NET · ASP.NET Core"],
+              ["Frontend", "React · TypeScript"],
+              ["Data", "SQL Server · PostgreSQL"],
+              ["Cloud", "Microsoft Azure"],
+              ["Integration", "REST APIs · MCP"],
+            ].map(([title, detail]) => (
+              <div key={title} className="border border-border-subtle p-5">
+                <p className="text-xs font-semibold uppercase tracking-wider text-gold">
+                  {title}
+                </p>
+
+                <p className="mt-3 text-sm leading-6 text-text-secondary">
+                  {detail}
+                </p>
               </div>
-
-              <h2 className="mb-4 text-black">
-                Start with a System Health Check
-              </h2>
-
-              <p className="text-text-muted mb-6 leading-relaxed">
-                A structured assessment of an existing business system. We
-                investigate reliability, performance, maintainability and
-                integration risks and give you a clear prioritised roadmap for
-                what to do next
-              </p>
-
-              <ul className="space-y-3 mb-8">
-                {healthCheckBenefits.map((item) => (
-                  <li key={item} className="flex gap-3 text-sm text-text-dark">
-                    <CheckCircle2 className="text-gold shrink-0" size={18} />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-
-              <Link to="/health-check" className="btn-primary">
-                Learn about the Health Check
-                <ArrowRight size={18} />
-              </Link>
-            </div>
-
-            {/* Sample report preview */}
-            <div className="bg-white border border-border-light rounded-lg p-6 md:p-8 shadow-sm">
-              <div className="flex items-center justify-between border-b border-border-light pb-4 mb-4 gap-4">
-                <div className="font-sans text-sm font-semibold text-text-dark">
-                  SYSTEM_HEALTH_REPORT.pdf
-                </div>
-
-                <div className="text-xs text-text-muted">Confidential</div>
-              </div>
-
-              <div className="space-y-4">
-                <div>
-                  <div className="text-xs text-text-muted uppercase tracking-wider mb-1">
-                    Overall Status
-                  </div>
-
-                  <div className="flex items-center text-sm font-medium text-amber-700">
-                    <div className="w-2 h-2 rounded-full bg-amber-600 mr-2" />
-                    Action Required (3 Critical Risks)
-                  </div>
-                </div>
-
-                <div>
-                  <div className="text-xs text-text-muted uppercase tracking-wider mb-2">
-                    Key Findings
-                  </div>
-
-                  <div className="space-y-2 text-sm">
-                    <div className="flex justify-between gap-4 border-b border-border-light pb-2">
-                      <span className="text-text-dark">Database Backups</span>
-                      <span className="font-sans text-red-600">
-                        Not Verified
-                      </span>
-                    </div>
-
-                    <div className="flex justify-between gap-4 border-b border-border-light pb-2">
-                      <span className="text-text-dark">API Uptime</span>
-                      <span className="font-sans text-text-dark">94.2%</span>
-                    </div>
-
-                    <div className="flex justify-between gap-4 border-b border-border-light pb-2">
-                      <span className="text-text-dark">Dependencies</span>
-                      <span className="font-sans text-red-600">
-                        12 Outdated
-                      </span>
-                    </div>
-
-                    <div className="flex justify-between gap-4">
-                      <span className="text-text-dark">Documentation</span>
-                      <span className="font-sans text-emerald-700">Good</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Section 6: CTA */}
-      <section className="section-padding bg-bg-main border-t border-border-subtle">
-        <div className="container-custom text-center max-w-2xl mx-auto">
-          <h2 className="mb-4">Let's talk about your systems.</h2>
+      {/* CTA */}
+      <section className="border-t border-border-subtle bg-[#171416] py-20 md:py-28">
+        <div className="container-custom grid gap-10 md:grid-cols-[1fr_1fr] md:items-end">
+          <div>
+            <p className="eyebrow mb-5">Start with a conversation</p>
 
-          <p className="text-text-secondary mb-8">
-            No sales pitch. Just a conversation about what is broken, what is
-            working, and how we can help
-          </p>
+            <h2 className="font-serif text-5xl font-normal leading-tight">
+              What could work better in your business?
+            </h2>
+          </div>
 
-          <Link to="/contact" className="btn-primary">
-            Start a Conversation
-            <ArrowRight size={18} />
-          </Link>
+          <div>
+            <p className="max-w-lg text-base leading-7 text-text-secondary">
+              Tell us about the business process, information challenges or
+              systems you want to improve. We will help you explore a sensible
+              technical approach and identify a practical next step.
+            </p>
+
+            <Link to="/contact" className="btn-primary mt-7">
+              Let's discuss it
+              <ArrowUpRight size={16} />
+            </Link>
+          </div>
         </div>
       </section>
     </>
