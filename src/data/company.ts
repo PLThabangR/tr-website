@@ -9,15 +9,7 @@ export const company = {
   divisions: [
  
    
-    {
-      number: "04",
-      name: "Business Automation",
-      short: "Reduce repetitive work with carefully applied automation.",
-      description: "A developing capability focused on workflow automation and practical AI integration, designed around measurable business value and human oversight.",
-      href: "/business-automation",
-      status: "Future expansion",
-      items: ["Workflow assessment", "Business process automation", "AI-assisted workflows", "Knowledge assistants and RAG", "Human-in-the-loop agent workflows"],
-    },
+  
     {
       number: "05",
       name: "Software Products",

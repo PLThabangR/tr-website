@@ -76,8 +76,8 @@ export function SiteLayout() {
           >
             {[
               ...links,
-              { label: "Business automation", to: "/business-automation" },
-              { label: "Software products", to: "/software-products" },
+             
+              // { label: "Software products", to: "/software-products" },
               { label: "Contact", to: "/contact" },
             ].map((link) => (
               <NavLink
